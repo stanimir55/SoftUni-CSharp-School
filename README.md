@@ -1,1 +1,1 @@
-# SoftUni-Tasks
+# SoftUni-CSharp-School
