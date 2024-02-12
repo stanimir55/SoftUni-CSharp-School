@@ -1,4 +1,4 @@
-﻿List<int> numbers = Console.ReadLine()
+List<int> numbers = Console.ReadLine()
     .Split()
     .Select(int.Parse)
     .ToList();
@@ -42,28 +42,24 @@ while ((commands = Console.ReadLine()) != "end")
             Console.WriteLine(numbers.Sum());
             break;
         case "Filter":
-            string condition = arguments[1];
-            int conditionNumber = int.Parse(arguments[2]);
-
-            if (condition == "<")
+            if (arguments[1] == "<")
             {
-                List<int> result = new List<int>(numbers.Where(x => x < conditionNumber));
+                List<int> result = new List<int>(numbers.Where(x => x < int.Parse(arguments[2])));
                 Console.WriteLine(string.Join(" ", result));
             }
-            else if (condition == ">")
+            else if (arguments[1] == ">")
             {
-                List<int> result = new List<int>(numbers.Where(x => x > conditionNumber));
-                Console.WriteLine(string.Join(" ", result));
-
-            }
-            else if (condition == ">=")
-            {
-                List<int> result = new List<int>(numbers.Where(x => x >= conditionNumber));
+                List<int> result = new List<int>(numbers.Where(x => x > int.Parse(arguments[2])));
                 Console.WriteLine(string.Join(" ", result));
             }
-            else if (condition == "<=")
+            else if (arguments[1] == ">=")
             {
-                List<int> result = new List<int>(numbers.Where(x => x <= conditionNumber));
+                List<int> result = new List<int>(numbers.Where(x => x >= int.Parse(arguments[2])));
+                Console.WriteLine(string.Join(" ", result));
+            }
+            else if (arguments[1] == "<=")
+            {
+                List<int> result = new List<int>(numbers.Where(x => x <= int.Parse(arguments[2])));
                 Console.WriteLine(string.Join(" ", result));
             }
             break;
