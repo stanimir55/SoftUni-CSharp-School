@@ -31,36 +31,29 @@ while ((commands = Console.ReadLine()) != "end")
             Console.WriteLine(numbers.Contains(int.Parse(arguments[1])) ? "Yes" : "No such number");
             break;
         case "PrintEven":
-            List<int> evenNumbers = new List<int>(numbers.Where(x => x % 2 == 0));
-            Console.WriteLine(string.Join(" ", evenNumbers));
+            Console.WriteLine(string.Join(" ", new List<int>(numbers.Where(x => x % 2 == 0)).ToList()));
             break;
         case "PrintOdd":
-            List<int> oddNumbers = new List<int>(numbers.Where(x => x % 2 == 1));
-            Console.WriteLine(string.Join(" ", oddNumbers));
+            Console.WriteLine(string.Join(" ", new List<int>(numbers.Where(x => x % 2 == 1)).ToList()));
             break;
         case "GetSum":
             Console.WriteLine(numbers.Sum());
             break;
         case "Filter":
-            if (arguments[1] == "<")
+            switch (arguments[1])
             {
-                List<int> result = new List<int>(numbers.Where(x => x < int.Parse(arguments[2])));
-                Console.WriteLine(string.Join(" ", result));
-            }
-            else if (arguments[1] == ">")
-            {
-                List<int> result = new List<int>(numbers.Where(x => x > int.Parse(arguments[2])));
-                Console.WriteLine(string.Join(" ", result));
-            }
-            else if (arguments[1] == ">=")
-            {
-                List<int> result = new List<int>(numbers.Where(x => x >= int.Parse(arguments[2])));
-                Console.WriteLine(string.Join(" ", result));
-            }
-            else if (arguments[1] == "<=")
-            {
-                List<int> result = new List<int>(numbers.Where(x => x <= int.Parse(arguments[2])));
-                Console.WriteLine(string.Join(" ", result));
+                case "<":
+                    Console.WriteLine(string.Join(" ", new List<int>(numbers.Where(x => x < int.Parse(arguments[2])).ToList())));
+                    break;
+                case ">":
+                    Console.WriteLine(string.Join(" ", new List<int>(numbers.Where(x => x > int.Parse(arguments[2])).ToList())));
+                    break;
+                case ">=":
+                    Console.WriteLine(string.Join(" ", new List<int>(numbers.Where(x => x >= int.Parse(arguments[2])).ToList())));
+                    break;
+                case "<=":
+                    Console.WriteLine(string.Join(" ", new List<int>(numbers.Where(x => x <= int.Parse(arguments[2])).ToList())));
+                    break;
             }
             break;
     }
