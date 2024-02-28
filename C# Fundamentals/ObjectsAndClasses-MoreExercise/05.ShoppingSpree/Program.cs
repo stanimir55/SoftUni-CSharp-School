@@ -1,122 +1,173 @@
-﻿// 60 - 100 //
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
-using System.Xml.Linq;
-
-string command = Console.ReadLine();
-List<Person> persons = new List<Person>();
-List<Product> products1 = new List<Product>();
-
-string[] people = command
-    .Split(";".TrimEnd())
-    .ToArray();
-
-for (int i = 0; i < people.Length; i++)
+namespace _04ShoppingSpree
 {
-    string[] arguments = people[i]
-        .Split("=")
-        .ToArray();
-     
-    string name = arguments[0];
-    if (name == string.Empty || name.Trim().Length == 0)
+    public class Product
     {
-        continue;
-    }
-    decimal money = decimal.Parse(arguments[1]);
+        private string name;
+        private double price;
 
-    Person person = new Person();
-
-    person.Name = name;
-    person.Money = money;
-
-    persons.Add(person);
-}
-
-string[] products = Console.ReadLine()
-    .Split(";".TrimEnd())
-    .ToArray();
-
-for (int i = 0; i < products.Length; i++)
-{
-    string[] arguments = products[i]
-        .Split("=")
-        .ToArray();
-
-    string productName = arguments[0];
-    if (productName == string.Empty || productName.Trim().Length == 0)
-    {
-        continue;
-    }
-    decimal productPrice = decimal.Parse(arguments[1]);
-
-    Product product = new Product();
-
-    product.Name = productName;
-    product.Price = productPrice;
-
-    products1.Add(product);
-}
-
-while ((command = Console.ReadLine()) != "END")
-{
-    string[] arguments = command
-        .Split(" ")
-        .ToArray();
-
-    string name = arguments[0];
-    if (name == string.Empty || name.Trim().Length == 0)
-    {
-        continue;
-    }
-    string productName = arguments[1];
-    if (productName == string.Empty || productName.Trim().Length == 0)
-    {
-        continue;
-    }
-
-    for (int i = 0; i < persons.Count; i++)
-    {
-        if (persons[i].Name.Contains(name))
+        public string Name
         {
-            if (persons[i].Money >= products1[i].Price)
+            get { return this.name; }
+            set
             {
-                persons[i].Money -= products1[i].Price;
-                persons[i].BagOfProducts += $"{productName + ", "}";
-
-                Console.WriteLine($"{persons[i].Name} bought {productName}");
-            }
-            else 
-            {
-                Console.WriteLine($"{persons[i].Name} can't afford {productName}");
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Name cannot be empty");
+                }
+                this.name = value;
             }
         }
-    }
-}
+        public double Price
+        {
+            get { return this.price; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Money cannot be negative");
+                }
+                this.price = value;
+            }
+        }
 
-for (int i = 0; i < persons.Count; i++)
-{
-    if (persons[i].BagOfProducts == null)
+        public Product(string name, double price)
+        {
+            this.Name = name;
+            this.Price = price;
+        }
+    }
+    public class Person
     {
-        Console.WriteLine($"{persons[i].Name} - Nothing bought");
+        private string name;
+        private double money;
+        private List<Product> bag;
+
+        public string Name
+        {
+            get { return this.name; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Name cannot be empty");
+                }
+                this.name = value;
+            }
+        }
+        public double Money
+        {
+            get { return this.money; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Money cannot be negative");
+                }
+                this.money = value;
+            }
+        }
+        public List<Product> Bag { get; set; }
+        public Person(string name, double money)
+        {
+            this.Name = name;
+            this.Money = money;
+            this.Bag = new List<Product>();
+        }
+
+        public void BuyProduct(Product prod)
+        {
+            if (this.Money >= prod.Price)
+            {
+                this.Money -= prod.Price;
+                this.Bag.Add(prod);
+            }
+            else
+            {
+                throw new ArgumentException($"{this.Name} can't afford {prod.Name}");
+            }
+        }
+
+
     }
-    else
+    class Program
     {
-        Console.WriteLine($"{persons[i].Name} - {persons[i].BagOfProducts.TrimEnd(' ', ',')}");
+        static void Main()
+        {
+            Dictionary<string, Person> allPersons = new Dictionary<string, Person>();
+            Dictionary<string, Product> allProducts = new Dictionary<string, Product>();
+
+            string[] persons = Console.ReadLine().Trim().Split(';');
+            foreach (var person in persons)
+            {
+                string[] sep = person.Split('=');
+                try
+                {
+                    Person per = new Person(sep[0], double.Parse(sep[1]));
+
+                    allPersons.Add(per.Name, per);
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return;
+                }
+
+            }
+            string[] products = Console.ReadLine().Trim().Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var product in products)
+            {
+                string[] sep = product.Split('=');
+                try
+                {
+                    Product prod = new Product(sep[0], double.Parse(sep[1]));
+                    allProducts.Add(prod.Name, prod);
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return;
+                }
+            }
+            string input = Console.ReadLine();
+            while (input != "END")
+            {
+                string[] command = input.Split();
+                try
+                {
+                    allPersons[command[0]].BuyProduct(allProducts[command[1]]);
+                    Console.WriteLine($"{command[0]} bought {command[1]}");
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                input = Console.ReadLine();
+            }
+
+            foreach (var person in allPersons)
+            {
+                Console.Write($"{person.Key} - ");
+
+                if (person.Value.Bag.Count < 1)
+                {
+                    Console.WriteLine("Nothing bought");
+                }
+                else
+                {
+
+                    Console.Write(string.Join(", ", person.Value.Bag.Select(x => x.Name)));
+                }
+                Console.WriteLine();
+            }
+
+        }
     }
-}
-
-
-class Person
-{
-    public string Name { get; set; }
-
-    public decimal Money { get; set; }
-
-    public string BagOfProducts { get; set; }
-}
-
-class Product
-{
-    public string Name { get; set; }
-
-    public decimal Price { get; set; }
 }
