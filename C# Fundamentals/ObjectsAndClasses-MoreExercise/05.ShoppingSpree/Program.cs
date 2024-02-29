@@ -50,34 +50,25 @@ while ((command = Console.ReadLine()) != "END")
     Person person = persons.FirstOrDefault(x => x.Name == arguments[0]);
     Product product = products.FirstOrDefault(x => x.Name == arguments[1]);
 
-    if (persons.Contains(person))
+    if (persons.Contains(person) && person.Money >= product.Price)
     {
-        if (person.Money >= product.Price)
-        {
-            person.Money -= product.Price;
-            person.BagOfProducts += $"{arguments[1] + ", "}";
+        person.Money -= product.Price;
+        person.BagOfProducts += $"{arguments[1] + ", "}";
 
-            Console.WriteLine($"{person.Name} bought {arguments[1]}");
-        }
-        else
-        {
-            Console.WriteLine($"{person.Name} can't afford {arguments[1]}");
-        }
+        Console.WriteLine($"{person.Name} bought {arguments[1]}");
     }
+    else
+    {
+        Console.WriteLine($"{person.Name} can't afford {arguments[1]}");
+    }
+
 }
 
 for (int i = 0; i < persons.Count; i++)
 {
-    if (persons[i].BagOfProducts == null)
-    {
-        Console.WriteLine($"{persons[i].Name} - Nothing bought");
-    }
-    else
-    {
-        Console.WriteLine($"{persons[i].Name} - {persons[i].BagOfProducts.TrimEnd(' ', ',')}");
-    }
+    Console.WriteLine(persons[i].BagOfProducts == null ? $"{persons[i].Name} - Nothing bought" :
+        $"{persons[i].Name} - {persons[i].BagOfProducts.TrimEnd(' ', ',')}");
 }
-
 
 class Person
 {
@@ -87,7 +78,6 @@ class Person
 
     public string BagOfProducts { get; set; }
 }
-
 class Product
 {
     public string Name { get; set; }
