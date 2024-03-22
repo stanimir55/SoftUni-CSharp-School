@@ -1,4 +1,4 @@
-﻿int numberOfHeroes = int.Parse(Console.ReadLine());
+int numberOfHeroes = int.Parse(Console.ReadLine());
 var heroes = new Dictionary<string, Dictionary<int, int>>();
 
 for (int i = 0; i < numberOfHeroes; i++)
@@ -16,13 +16,11 @@ for (int i = 0; i < numberOfHeroes; i++)
 }
 
 string commands;
-
 while ((commands = Console.ReadLine()) != "End")
 {
     string[] command = commands
         .Split(" - ")
         .ToArray();
-
     string heroName = command[1];
 
     switch (command[0])
@@ -46,11 +44,8 @@ while ((commands = Console.ReadLine()) != "End")
                             heroes[heroName][kvpOne.Key] = result;
                             break;
                         }
-                        else
-                        {
-                            Console.WriteLine($"{heroName} does not have enough MP to cast {spellName}!");
-                        }
 
+                        Console.WriteLine($"{heroName} does not have enough MP to cast {spellName}!");
                         heroes[heroName] = new Dictionary<int, int>();
                         heroes[heroName][kvpOne.Key] = kvpOne.Value;
                         break;
@@ -80,7 +75,6 @@ while ((commands = Console.ReadLine()) != "End")
                             }
 
                             Console.WriteLine($"{heroName} was hit for {damage} HP by {attacker} and now has {result} HP left!");
-
                             heroes[heroName] = new Dictionary<int, int>();
                             heroes[heroName][result] = kvpOne.Value;
                         }
@@ -142,7 +136,7 @@ while ((commands = Console.ReadLine()) != "End")
 foreach (var kvp in heroes)
 {
     Console.WriteLine(kvp.Key);
-
+    
     foreach (var kvpOne in kvp.Value)
     {
         Console.WriteLine($"  HP: {kvpOne.Key}");
