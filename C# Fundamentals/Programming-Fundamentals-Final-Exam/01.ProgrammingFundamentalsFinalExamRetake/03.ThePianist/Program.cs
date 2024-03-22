@@ -1,4 +1,4 @@
-﻿int linesCount = int.Parse(Console.ReadLine());
+int linesCount = int.Parse(Console.ReadLine());
 var pieces = new Dictionary<string, Dictionary<string, string>>();
 
 for (int i = 0; i < linesCount; i++)
@@ -28,13 +28,11 @@ while ((commands = Console.ReadLine()) != "Stop")
             {
                 pieces[piece] = new Dictionary<string, string>();
                 pieces[piece].Add(composer, key);
-
                 Console.WriteLine($"{piece} by {composer} in {key} added to the collection!");
+                continue;
             }
-            else
-            {
-                Console.WriteLine($"{piece} is already in the collection!");
-            }
+
+            Console.WriteLine($"{piece} is already in the collection!");
             break;
         case "Remove":
             string removePiece = arguments[1];
@@ -42,13 +40,11 @@ while ((commands = Console.ReadLine()) != "Stop")
             if (!pieces.ContainsKey(removePiece))
             {
                 Console.WriteLine($"Invalid operation! {removePiece} does not exist in the collection.");
+                continue;
             }
-            else
-            {
-                pieces.Remove(removePiece);
 
-                Console.WriteLine($"Successfully removed {removePiece}!");
-            }
+            pieces.Remove(removePiece);
+            Console.WriteLine($"Successfully removed {removePiece}!");
             break;
         case "ChangeKey":
             string changePiece = arguments[1];
@@ -57,23 +53,22 @@ while ((commands = Console.ReadLine()) != "Stop")
             if (!pieces.ContainsKey(changePiece))
             {
                 Console.WriteLine($"Invalid operation! {changePiece} does not exist in the collection.");
+                continue;
             }
-            else
+
+            foreach (var kvp in pieces)
             {
-                foreach (var kvp in pieces)
+                foreach (var kvpOne in kvp.Value)
                 {
-                    foreach (var kvpOne in kvp.Value)
+                    if (kvp.Key == changePiece)
                     {
-                        if (kvp.Key == changePiece)
-                        {
-                            pieces[changePiece][kvpOne.Key] = newKey;
-                            break;
-                        }
+                        pieces[changePiece][kvpOne.Key] = newKey;
+                        break;
                     }
                 }
-
-                Console.WriteLine($"Changed the key of {changePiece} to {newKey}!");
             }
+
+            Console.WriteLine($"Changed the key of {changePiece} to {newKey}!");
             break;
     }
 }
