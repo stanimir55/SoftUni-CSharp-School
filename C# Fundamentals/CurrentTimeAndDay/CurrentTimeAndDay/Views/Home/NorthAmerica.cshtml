@@ -1,0 +1,202 @@
+﻿@{
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: azure;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            h1 {
+                color: dark;
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+            }
+
+                a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+            .previous {
+                background-color: #f1f1f1;
+                color: black;
+            }
+
+            .next {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+            .round {
+                border-radius: 50%;
+            }
+
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+            }
+
+            .row:after {
+                content: "";
+                display: flex;
+                clear: both;
+                height: 100vh;
+            }
+        </style>
+        <title>Current Time and Day</title>
+        <script>function displayTime() {
+                var date = new Date();
+                var time = date.toLocaleTimeString();
+                var day = date.toLocaleDateString();
+                document.getElementById("time").innerHTML = time;
+                document.getElementById("day").innerHTML = day;
+            }
+
+            function displayTimeInCity(city) {
+                var time;
+                if (city === 'Saint Johns') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("saint johns-time").innerHTML = time;
+                } else if (city === 'Nassau') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Nassau" });
+                    document.getElementById("nassau-time").innerHTML = time;
+                } else if (city === 'Bridgetown') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("bridgetown-time").innerHTML = time;
+                } else if (city === 'Belmopan') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Belize" });
+                    document.getElementById("belmopan-time").innerHTML = time;
+                } else if (city === 'Ottawa') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("ottawa-time").innerHTML = time;
+                } else if (city === 'San Jose') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Costa_Rica" });
+                    document.getElementById("san jose-time").innerHTML = time;
+                } else if (city === 'Havana') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Havana" });
+                    document.getElementById("havana-time").innerHTML = time;
+                } else if (city === 'Roseau') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("roseau-time").innerHTML = time;
+                } else if (city === 'Santo Domingo') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Santo_Domingo" });
+                    document.getElementById("santo domingo-time").innerHTML = time;
+                } else if (city === 'San Salvador') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/El_Salvador" });
+                    document.getElementById("san salvador-time").innerHTML = time;
+                } else if (city === 'Saint Georges') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("saint georges-time").innerHTML = time;
+                } else if (city === 'Guatemala City') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Guatemala" });
+                    document.getElementById("guatemala city-time").innerHTML = time;
+                } else if (city === 'Port-au-Prince') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Port-au-Prince" });
+                    document.getElementById("port-au-prince-time").innerHTML = time;
+                } else if (city === 'Tegucigalpa') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Tegucigalpa" });
+                    document.getElementById("tegucigalpa-time").innerHTML = time;
+                } else if (city === 'Kingston') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Jamaica" });
+                    document.getElementById("kingston-time").innerHTML = time;
+                } else if (city === 'Mexico City') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Mexico_City" });
+                    document.getElementById("mexico city-time").innerHTML = time;
+                } else if (city === 'Managua') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Managua" });
+                    document.getElementById("managua-time").innerHTML = time;
+                } else if (city === 'Panama City') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Panama" });
+                    document.getElementById("panama city-time").innerHTML = time;
+                } else if (city === 'Basseterre') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("basseterre-time").innerHTML = time;
+                } else if (city === 'Castries') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("castries-time").innerHTML = time;
+                } else if (city === 'Kingstown') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Barbados" });
+                    document.getElementById("kingstown-time").innerHTML = time;
+                } else if (city === 'Port of Spain') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Port_of_Spain" });
+                    document.getElementById("port of spain-time").innerHTML = time;
+                } else if (city === 'Washington') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/New_York" });
+                    document.getElementById("washington-time").innerHTML = time;
+                }
+            }
+
+            setInterval(displayTime, 1000);</script>
+    </head>
+    <body onload="displayTime()">
+        <button onclick="displayTimeInCity('Saint Johns')">Saint Johns</button>
+        <button onclick="displayTimeInCity('Nassau')">Nassau</button>
+        <button onclick="displayTimeInCity('Bridgetown')">Bridgetown</button>
+        <button onclick="displayTimeInCity('Belmopan')">Belmopan</button>
+        <button onclick="displayTimeInCity('Ottawa')">Ottawa</button>
+        <button onclick="displayTimeInCity('San Jose')">San Jose</button>
+        <button onclick="displayTimeInCity('Havana')">Havana</button>
+        <button onclick="displayTimeInCity('Roseau')">Roseau</button>
+        <button onclick="displayTimeInCity('Santo Domingo')">Santo Domingo</button>
+        <button onclick="displayTimeInCity('San Salvador')">San Salvador</button>
+        <button onclick="displayTimeInCity('Saint Georges')">Saint Georges</button>
+        <button onclick="displayTimeInCity('Guatemala City')">Guatemala City</button>
+        <button onclick="displayTimeInCity('Port-au-Prince')">Port-au-Prince</button>
+        <button onclick="displayTimeInCity('Tegucigalpa')">Tegucigalpa</button>
+        <button onclick="displayTimeInCity('Kingston')">Kingston</button>
+        <button onclick="displayTimeInCity('Mexico City')">Mexico City</button>
+        <button onclick="displayTimeInCity('Managua')">Managua</button>
+        <button onclick="displayTimeInCity('Panama City')">Panama City</button>
+        <button onclick="displayTimeInCity('Basseterre')">Basseterre</button>
+        <button onclick="displayTimeInCity('Castries')">Castries</button>
+        <button onclick="displayTimeInCity('Kingstown')">Kingstown</button>
+        <button onclick="displayTimeInCity('Port of Spain')">Port of Spain</button>
+        <button onclick="displayTimeInCity('Washington')">Washington</button>
+        <div class="row">
+            <div class="column">
+                <div class="leftside">
+                    <p>The current time in Saint Johns is: <span id="saint johns-time"></span></p>
+                    <p>The current time in Nassau is: <span id="nassau-time"></span></p>
+                    <p>The current time in Bridgetown is: <span id="bridgetown-time"></span></p>
+                    <p>The current time in Belmopan is: <span id="belmopan-time"></span></p>
+                    <p>The current time in Ottawa is: <span id="ottawa-time"></span></p>
+                    <p>The current time in San Jose is: <span id="san jose-time"></span></p>
+                    <p>The current time in Havana is: <span id="havana-time"></span></p>
+                    <p>The current time in Roseau is: <span id="roseau-time"></span></p>
+                    <p>The current time in Santo Domingo is: <span id="santo domingo-time"></span></p>
+                    <p>The current time in San Salvador is: <span id="san salvador-time"></span></p>
+                    <p>The current time in Saint Georges is: <span id="saint georges-time"></span></p>
+                    <p>The current time in Guatemala City is: <span id="guatemala city-time"></span></p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="rightside">
+                    <p>The current time in Port-au-Prince is: <span id="port-au-prince-time"></span></p>
+                    <p>The current time in Tegucigalpa is: <span id="tegucigalpa-time"></span></p>
+                    <p>The current time in Kingston is: <span id="kingston-time"></span></p>
+                    <p>The current time in Mexico City is: <span id="mexico city-time"></span></p>
+                    <p>The current time in Managua is: <span id="managua-time"></span></p>
+                    <p>The current time in Panama City is: <span id="panama city-time"></span></p>
+                    <p>The current time in Basseterre is: <span id="basseterre-time"></span></p>
+                    <p>The current time in Castries is: <span id="castries-time"></span></p>
+                    <p>The current time in Kingstown is: <span id="kingstown-time"></span></p>
+                    <p>The current time in Port of Spain is: <span id="port of spain-time"></span></p>
+                    <p>The current time in Washington is: <span id="washington-time"></span></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+}
+
+
+
+

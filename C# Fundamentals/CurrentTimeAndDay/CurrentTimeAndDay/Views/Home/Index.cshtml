@@ -1,0 +1,48 @@
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+
+@{
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: azure;
+                text-align:center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+        <title>Current Time and Day</title>
+        <script>function displayTime() {
+                var date = new Date();
+                var time = date.toLocaleTimeString();
+                var day = date.toLocaleDateString();
+                document.getElementById("time").innerHTML = time;
+                document.getElementById("day").innerHTML = day;
+            }
+            setInterval(displayTime, 1000);</script>
+    </head>
+    <body onload="displayTime()">
+        <h1 style="color:firebrick">Current Time and Day</h1>
+        <p style="font-size:x-large">The current Time is: <span id="time"></span>
+        <style>
+            p{
+                font-family: fantasy;
+                color: darkgreen;
+            }
+            
+        </style>
+        </p>
+        <p style="font-size:x-large">Today is: <span id="day"></span></p>
+        <div class="background-image"></div>
+    </body>
+</html>
+}
+
+

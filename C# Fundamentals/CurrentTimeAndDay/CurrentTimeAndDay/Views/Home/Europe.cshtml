@@ -1,0 +1,319 @@
+﻿@{
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: azure;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            h1 {
+                color: dark;
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+            }
+
+                a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+            .previous {
+                background-color: #f1f1f1;
+                color: black;
+            }
+
+            .next {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+            .round {
+                border-radius: 50%;
+            }
+
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+            }
+
+            .row:after {
+                content: "";
+                display: flex;
+                clear: both;
+                height: 100vh;
+            }
+        </style>
+        <title>Current Time and Day</title>
+        <script>function displayTime() {
+                var date = new Date();
+                var time = date.toLocaleTimeString();
+                var day = date.toLocaleDateString();
+                document.getElementById("time").innerHTML = time;
+                document.getElementById("day").innerHTML = day;
+            }
+
+            function displayTimeInCity(city) {
+                var time;
+                //if (city === 'New York') {
+                //    time = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+                //    document.getElementById("new-york-time").innerHTML = time;
+
+                if (city === 'Amsterdam') {
+                    time = new Date().toLocaleString("cz-NL", { timeZone: "Europe/Amsterdam" });
+                    document.getElementById("amsterdam-time").innerHTML = time;
+                } else if (city === 'Andorra la Vella') {
+                    time = new Date().toLocaleString("cz-NL", { timeZone: "Europe/Amsterdam" });
+                    document.getElementById("andorra-time").innerHTML = time;
+                } else if (city === 'Athens') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Athens" });
+                    document.getElementById("athens-time").innerHTML = time;
+                } else if (city === 'Belgrade') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Belgrade" });
+                    document.getElementById("belgrade-time").innerHTML = time;
+                } else if (city === 'Berlin') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Berlin" });
+                    document.getElementById("berlin-time").innerHTML = time;
+                } else if (city === 'Bern') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Berlin" });
+                    document.getElementById("bern-time").innerHTML = time;
+                } else if (city === 'Bratislava') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Bratislava" });
+                    document.getElementById("bratislava-time").innerHTML = time;
+                } else if (city === 'Brussels') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Brussels" });
+                    document.getElementById("brussels-time").innerHTML = time;
+                } else if (city === 'Bucharest') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Bucharest" });
+                    document.getElementById("bucharest-time").innerHTML = time;
+                } else if (city === 'Chisinau') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Chisinau" });
+                    document.getElementById("chisinau-time").innerHTML = time;
+                } else if (city === 'Copenhagen') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Copenhagen" });
+                    document.getElementById("copenhagen-time").innerHTML = time;
+                } else if (city === 'Dublin') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Dublin" });
+                    document.getElementById("dublin-time").innerHTML = time;
+                } else if (city === 'Helsinki') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Helsinki" });
+                    document.getElementById("helsinki-time").innerHTML = time;
+                } else if (city === 'Kiev') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Kiev" });
+                    document.getElementById("kiev-time").innerHTML = time;
+                } else if (city === 'Lisbon') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Lisbon" });
+                    document.getElementById("lisbon-time").innerHTML = time;
+                } else if (city === 'Ljubljana') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Ljubljana" });
+                    document.getElementById("ljubljana-time").innerHTML = time;
+                } else if (city === 'London') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/London" });
+                    document.getElementById("london-time").innerHTML = time;
+                } else if (city === 'Luxembourg') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Luxembourg" });
+                    document.getElementById("luxembourg-time").innerHTML = time;
+                } else if (city === 'Madrid') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Madrid" });
+                    document.getElementById("madrid-time").innerHTML = time;
+                } else if (city === 'Minsk') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Minsk" });
+                    document.getElementById("minsk-time").innerHTML = time;
+                } else if (city === 'Monaco') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Monaco" });
+                    document.getElementById("monaco-time").innerHTML = time;
+                } else if (city === 'Moscow') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Moscow" });
+                    document.getElementById("moscow-time").innerHTML = time;
+                } else if (city === 'Nicosia') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Nicosia" });
+                    document.getElementById("nicosia-time").innerHTML = time;
+                } else if (city === 'Oslo') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Oslo" });
+                    document.getElementById("oslo-time").innerHTML = time;
+                } else if (city === 'Paris') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Paris" });
+                    document.getElementById("paris-time").innerHTML = time;
+                } else if (city === 'Podgorica') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Podgorica" });
+                    document.getElementById("podgorica-time").innerHTML = time;
+                } else if (city === 'Prague') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Prague" });
+                    document.getElementById("prague-time").innerHTML = time;
+                } else if (city === 'Reykjavik') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Accra" });
+                    document.getElementById("reykjavik-time").innerHTML = time;
+                } else if (city === 'Riga') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Sofia" });
+                    document.getElementById("riga-time").innerHTML = time;
+                } else if (city === 'Rome') {
+                    time = new Date().toLocaleString("cz-GR", { timeZone: "Europe/Rome" });
+                    document.getElementById("rome-time").innerHTML = time;
+                } else if (city === 'San Marino') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Amsterdam" });
+                    document.getElementById("san marino-time").innerHTML = time;
+                } else if (city === 'Sarajevo') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Sarajevo" });
+                    document.getElementById("sarajevo-time").innerHTML = time;
+                } else if (city === 'Skopje') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Skopje" });
+                    document.getElementById("skopje-time").innerHTML = time;
+                } else if (city === 'Sofia') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Sofia" });
+                    document.getElementById("sofia-time").innerHTML = time;
+                } else if (city === 'Stockholm') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Stockholm" });
+                    document.getElementById("stockholm-time").innerHTML = time;
+                } else if (city === 'Tallinn') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Tallinn" });
+                    document.getElementById("tallinn-time").innerHTML = time;
+                } else if (city === 'Tirana') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Amsterdam" });
+                    document.getElementById("tirana-time").innerHTML = time;
+                } else if (city === 'Vaduz') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Vaduz" });
+                    document.getElementById("vaduz-time").innerHTML = time;
+                } else if (city === 'Valletta') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Amsterdam" });
+                    document.getElementById("valletta-time").innerHTML = time;
+                } else if (city === 'Vatican City') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Amsterdam" });
+                    document.getElementById("vatican city-time").innerHTML = time;
+                } else if (city === 'Vienna') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Vienna" });
+                    document.getElementById("vienna-time").innerHTML = time;
+                } else if (city === 'Vilnius') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Vilnius" });
+                    document.getElementById("vilnius-time").innerHTML = time;
+                } else if (city === 'Warsaw') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Warsaw" });
+                    document.getElementById("warsaw-time").innerHTML = time;
+                } else if (city === 'Zagreb') {
+                    time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Zagreb" });
+                    document.getElementById("zagreb-time").innerHTML = time;
+                }
+
+            }
+
+            setInterval(displayTime, 1000);</script>
+    </head>
+    <body onload="displayTime()">
+        <button onclick="displayTimeInCity('Amsterdam')">Amsterdam</button>
+        <button onclick="displayTimeInCity('Andorra la Vella')">Andorra la Vella</button>
+        <button onclick="displayTimeInCity('Athens')">Athens</button>
+        <button onclick="displayTimeInCity('Belgrade')">Belgrade</button>
+        <button onclick="displayTimeInCity('Berlin')">Berlin</button>
+        <button onclick="displayTimeInCity('Bern')">Bern</button>
+        <button onclick="displayTimeInCity('Bratislava')">Bratislava</button>
+        <button onclick="displayTimeInCity('Brussels')">Brussels</button>
+        <button onclick="displayTimeInCity('Bucharest')">Bucharest</button>
+        <button onclick="displayTimeInCity('Chisinau')">Chisinau</button>
+        <button onclick="displayTimeInCity('Copenhagen')">Copenhagen</button>
+        <button onclick="displayTimeInCity('Dublin')">Dublin</button>
+        <button onclick="displayTimeInCity('Helsinki')">Helsinki</button>
+        <button onclick="displayTimeInCity('Kiev')">Kiev</button>
+        <button onclick="displayTimeInCity('Lisbon')">Lisbon</button>
+        <button onclick="displayTimeInCity('Ljubljana')">Ljubljana</button>
+        <button onclick="displayTimeInCity('London')">London</button>
+        <button onclick="displayTimeInCity('Luxembourg')">Luxembourg</button>
+        <button onclick="displayTimeInCity('Madrid')">Madrid</button>
+        <button onclick="displayTimeInCity('Minsk')">Minsk</button>
+        <button onclick="displayTimeInCity('Monaco')">Monaco</button>
+        <button onclick="displayTimeInCity('Moscow')">Moscow</button>
+        <button onclick="displayTimeInCity('Nicosia')">Nicosia</button>
+        <button onclick="displayTimeInCity('Oslo')">Oslo</button>
+        <button onclick="displayTimeInCity('Paris')">Paris</button>
+        <button onclick="displayTimeInCity('Podgorica')">Podgorica</button>
+        <button onclick="displayTimeInCity('Prague')">Prague</button>
+        <button onclick="displayTimeInCity('Reykjavik')">Reykjavik</button>
+        <button onclick="displayTimeInCity('Riga')">Riga</button>
+        <button onclick="displayTimeInCity('Rome')">Rome</button>
+        <button onclick="displayTimeInCity('San Marino')">San Marino</button>
+        <button onclick="displayTimeInCity('Sarajevo')">Sarajevo</button>
+        <button onclick="displayTimeInCity('Skopje')">Skopje</button>
+        <button onclick="displayTimeInCity('Sofia')">Sofia</button>
+        <button onclick="displayTimeInCity('Stockholm')">Stockholm</button>
+        <button onclick="displayTimeInCity('Tallinn')">Tallinn</button>
+        <button onclick="displayTimeInCity('Tirana')">Tirana</button>
+        <button onclick="displayTimeInCity('Vaduz')">Vaduz</button>
+        <button onclick="displayTimeInCity('Valletta')">Valletta</button>
+        <button onclick="displayTimeInCity('Vatican City')">Vatican City</button>
+        <button onclick="displayTimeInCity('Vienna')">Vienna</button>
+        <button onclick="displayTimeInCity('Vilnius')">Vilnius</button>
+        <button onclick="displayTimeInCity('Warsaw')">Warsaw</button>
+        <button onclick="displayTimeInCity('Zagreb')">Zagreb</button>
+
+        @*<a href="#" class="previous round">&#8249;</a>
+            <a href="#" class="next round">&#8250;</a>*@
+        <div class="row">
+            <div class="column">
+                <div class="leftside">
+                    <p>The current time in Amsterdam is: <span id="amsterdam-time"></span></p>
+                    <p>The current time in Andorra la Vella is: <span id="andorra-time"></span></p>
+                    <p>The current time in Athens is: <span id="athens-time"></span></p>
+                    <p>The current time in Belgrade is: <span id="belgrade-time"></span></p>
+                    <p>The current time in Berlin is: <span id="berlin-time"></span></p>
+                    <p>The current time in Bern is: <span id="bern-time"></span></p>
+                    <p>The current time in Bratislava is: <span id="bratislava-time"></span></p>
+                    <p>The current time in Brussels is: <span id="brussels-time"></span></p>
+                    <p>The current time in Bucharest is: <span id="bucharest-time"></span></p>
+                    <p>The current time in Chisinau is: <span id="chisinau-time"></span></p>
+                    <p>The current time in Copenhagen is: <span id="copenhagen-time"></span></p>
+                    <p>The current time in Dublin is: <span id="dublin-time"></span></p>
+                    <p>The current time in Helsinki is: <span id="helsinki-time"></span></p>
+                    <p>The current time in Kiev is: <span id="kiev-time"></span></p>
+                    <p>The current time in Lisbon is: <span id="lisbon-time"></span></p>
+                    <p>The current time in Ljubljana is: <span id="ljubljana-time"></span></p>
+                    <p>The current time in London is: <span id="london-time"></span></p>
+                    <p>The current time in Luxembourg is: <span id="luxembourg-time"></span></p>
+                    <p>The current time in Madrid is: <span id="madrid-time"></span></p>
+                    <p>The current time in Minsk is: <span id="minsk-time"></span></p>
+                    <p>The current time in Monaco is: <span id="monaco-time"></span></p>
+                    <p>The current time in Moscow is: <span id="moscow-time"></span></p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="rightside">
+                    <p>The current time in Nicosia is: <span id="nicosia-time"></span></p>
+                    <p>The current time in Oslo is: <span id="oslo-time"></span></p>
+                    <p>The current time in Paris is: <span id="paris-time"></span></p>
+                    <p>The current time in Podgorica is: <span id="podgorica-time"></span></p>
+                    <p>The current time in Prague is: <span id="prague-time"></span></p>
+                    <p>The current time in Reykjavik is: <span id="reykjavik-time"></span></p>
+                    <p>The current time in Riga is: <span id="riga-time"></span></p>
+                    <p>The current time in Rome is: <span id="rome-time"></span></p>
+                    <p>The current time in San Marino is: <span id="san marino-time"></span></p>
+                    <p>The current time in Sarajevo is: <span id="sarajevo-time"></span></p>
+                    <p>The current time in Skopje is: <span id="skopje-time"></span></p>
+                    <p>The current time in Sofia is: <span id="sofia-time"></span></p>
+                    <p>The current time in Stockholm is: <span id="stockholm-time"></span></p>
+                    <p>The current time in Tallinn is: <span id="tallinn-time"></span></p>
+                    <p>The current time in Tirana is: <span id="tirana-time"></span></p>
+                    <p>The current time in Vaduz is: <span id="vaduz-time"></span></p>
+                    <p>The current time in Valletta is: <span id="valletta-time"></span></p>
+                    <p>The current time in Vatican City is: <span id="vatican city-time"></span></p>
+                    <p>The current time in Vienna is: <span id="vienna-time"></span></p>
+                    <p>The current time in Vilnius is: <span id="vilnius-time"></span></p>
+                    <p>The current time in Warsaw is: <span id="warsaw-time"></span></p>
+                    <p>The current time in Zagreb is: <span id="zagreb-time"></span></p>
+                </div>
+            </div>
+        </div>
+
+        @*<a href="#" class="previous">&laquo; Previous</a>
+            <a href="EmptyHtmlFile.html" class="next">Next &raquo;</a>*@
+
+
+    </body>
+</html>
+}
+
+
+
