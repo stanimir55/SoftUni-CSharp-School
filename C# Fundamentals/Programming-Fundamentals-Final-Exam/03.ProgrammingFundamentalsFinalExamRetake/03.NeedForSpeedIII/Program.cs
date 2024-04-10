@@ -1,4 +1,4 @@
-﻿int numberOfCars = int.Parse(Console.ReadLine());
+int numberOfCars = int.Parse(Console.ReadLine());
 
 var carsDistance = new Dictionary<string, int>();
 var carsFuel = new Dictionary<string, int>();
@@ -17,72 +17,71 @@ for (int i = 0; i < numberOfCars; i++)
     carsFuel[carName] = fuel;
 }
 
-string[] command = Console.ReadLine().Split(" : ").ToArray();
+string[] command = Console.ReadLine()
+    .Split(" : ")
+    .ToArray();
 
 while (command[0] != "Stop")
 {
+    string carName = command[1];
+
     if (command[0] == "Drive")
     {
-        int amortizationMileage = 100000;
         int distance = int.Parse(command[2]);
         int fuel = int.Parse(command[3]);
 
-        if (fuel > carsFuel[command[1]])
+        if (fuel > carsFuel[carName])
         {
             Console.WriteLine("Not enough fuel to make that ride");
         }
         else
         {
-            carsDistance[command[1]] += distance;
-            carsFuel[command[1]] -= fuel;
-
-            Console.WriteLine($"{command[1]} driven for {distance} kilometers. {fuel} liters of fuel consumed.");
+            carsDistance[carName] += distance;
+            carsFuel[carName] -= fuel;
+            Console.WriteLine($"{carName} driven for {distance} kilometers. {fuel} liters of fuel consumed.");
         }
 
-        if (carsDistance[command[1]] >= amortizationMileage)
+        if (carsDistance[command[1]] >= 100000)
         {
-            Console.WriteLine($"Time to sell the {command[1]}!");
-
-            carsDistance.Remove(command[1]);
-            carsFuel.Remove(command[1]);
+            Console.WriteLine($"Time to sell the {carName}!");
+            carsDistance.Remove(carName);
+            carsFuel.Remove(carName);
         }
     }
     else if (command[0] == "Refuel")
     {
-        int maxRefillLevel = 75;
         int fuel = int.Parse(command[2]);
-        int actualNeededFuelAmount = maxRefillLevel - carsFuel[command[1]];
+        int actualNeededFuelAmount = 75 - carsFuel[carName];
+        carsFuel[carName] += fuel;
 
-        carsFuel[command[1]] += fuel;
-
-        if (carsFuel[command[1]] > maxRefillLevel)
+        if (carsFuel[carName] > 75)
         {
-            Console.WriteLine($"{command[1]} refueled with {actualNeededFuelAmount} liters");
-            carsFuel[command[1]] = maxRefillLevel;
+            Console.WriteLine($"{carName} refueled with {actualNeededFuelAmount} liters");
+            carsFuel[carName] = 75;
         }
         else
         {
-            Console.WriteLine($"{command[1]} refueled with {fuel} liters");
+            Console.WriteLine($"{carName} refueled with {fuel} liters");
         }
     }
     else if (command[0] == "Revert")
     {
-        int minimumMilegeLevel = 10000;
         int revert = int.Parse(command[2]);
+        carsDistance[carName] -= revert;
 
-        carsDistance[command[1]] -= revert;
-
-        if (carsDistance[command[1]] >= minimumMilegeLevel)
+        if (carsDistance[carName] >= 10000)
         {
-            Console.WriteLine($"{command[1]} mileage decreased by {revert} kilometers");
+            Console.WriteLine($"{carName} mileage decreased by {revert} kilometers");
         }
         else
         {
-            carsDistance[command[1]] = minimumMilegeLevel;
+            carsDistance[carName] = 10000;
         }
     }
 
-    command = Console.ReadLine().Split(" : ").ToArray();
+    command = Console.ReadLine()
+        .Split(" : ")
+        .ToArray();
 }
 
 Console.WriteLine(string.Join($"{Environment.NewLine}", carsDistance
