@@ -20,5 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Home\Europee.cshtml" />
+    <Content Remove="wwwroot\lib\images\earth.jpg" />
   </ItemGroup>
 </Project>

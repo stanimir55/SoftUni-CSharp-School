@@ -3,11 +3,14 @@
     <head>
         <style>
             body {
-                background-color: azure;
+                background-image: url(https://bg.izzi.digital/DOS/69213/datastore/15/publication/69213/pictures/2021/02/09/1612864336_KoricaM3U1.jpg?v=1700033690);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: auto;
                 text-align: center;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
-        
+
             h1 {
                 color: dark;
                 text-align: center;
@@ -52,294 +55,445 @@
             }
         </style>
         <title>Current Time and Day</title>
-        <script>function displayTime() {
-                var date = new Date();
-                var time = date.toLocaleTimeString();
-                var day = date.toLocaleDateString();
-                document.getElementById("time").innerHTML = time;
-                document.getElementById("day").innerHTML = day;
-            }
-
-            function displayTimeInCity(city) {
+        <script>function displayTimeInCity(city) {
                 var time;
+                var func;
                 if (city === 'Abuja') {
-                    time = new Date().toLocaleString("cz-NL", { timeZone: "Africa/Algiers" });
-                    document.getElementById("abuja-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-NL", { timeZone: "Africa/Algiers" });
+                        document.getElementById("abuja-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Accra') {
-                    time = new Date().toLocaleString("cz-NL", { timeZone: "Africa/Accra" });
-                    document.getElementById("accra-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-NL", { timeZone: "Africa/Accra" });
+                        document.getElementById("accra-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Addis Ababa') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Addis_Ababa" });
-                    document.getElementById("addis ababa-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Addis_Ababa" });
+                        document.getElementById("addis ababa-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Algiers') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Algiers" });
-                    document.getElementById("algiers-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Algiers" });
+                        document.getElementById("algiers-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Antananarivo') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Addis_Ababa" });
-                    document.getElementById("antananarivo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Addis_Ababa" });
+                        document.getElementById("antananarivo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Asmara') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Asmara" });
-                    document.getElementById("asmara-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Asmara" });
+                        document.getElementById("asmara-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bamako') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bamako" });
-                    document.getElementById("bamako-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bamako" });
+                        document.getElementById("bamako-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bangui') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bangui" });
-                    document.getElementById("bangui-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bangui" });
+                        document.getElementById("bangui-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Banjul') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Banjul" });
-                    document.getElementById("banjul-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Banjul" });
+                        document.getElementById("banjul-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bissau') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bissau" });
-                    document.getElementById("bissau-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bissau" });
+                        document.getElementById("bissau-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Brazzaville') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Brazzaville" });
-                    document.getElementById("brazzaville-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Brazzaville" });
+                        document.getElementById("brazzaville-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bujumbura') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bujumbura" });
-                    document.getElementById("bujumbura-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Bujumbura" });
+                        document.getElementById("bujumbura-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Cairo') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Cairo" });
-                    document.getElementById("cairo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Cairo" });
+                        document.getElementById("cairo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Cape Town') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Cairo" });
-                    document.getElementById("cape town-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Cairo" });
+                        document.getElementById("cape town-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Conakry') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Conakry" });
-                    document.getElementById("conakry-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Conakry" });
+                        document.getElementById("conakry-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Dakar') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Dakar" });
-                    document.getElementById("dakar-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Dakar" });
+                        document.getElementById("dakar-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Dodoma') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Asmara" });
-                    document.getElementById("dodoma-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Asmara" });
+                        document.getElementById("dodoma-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Djibouti City') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Asmara" });
-                    document.getElementById("djibouti city-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Asmara" });
+                        document.getElementById("djibouti city-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Freetown') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Freetown" });
-                    document.getElementById("freetown-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Freetown" });
+                        document.getElementById("freetown-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Gaborone') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Gaborone" });
-                    document.getElementById("gaborone-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Gaborone" });
+                        document.getElementById("gaborone-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Harare') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Juba" });
-                    document.getElementById("harare-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Juba" });
+                        document.getElementById("harare-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Juba') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Harare" });
-                    document.getElementById("juba-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Harare" });
+                        document.getElementById("juba-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Kampala') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Kampala" });
-                    document.getElementById("kampala-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Kampala" });
+                        document.getElementById("kampala-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Khartoum') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Khartoum" });
-                    document.getElementById("khartoum-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Khartoum" });
+                        document.getElementById("khartoum-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Kigali') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Kigali" });
-                    document.getElementById("kigali-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Kigali" });
+                        document.getElementById("kigali-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Kinshasa') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Kinshasa" });
-                    document.getElementById("kinshasa-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Kinshasa" });
+                        document.getElementById("kinshasa-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Libreville') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Libreville" });
-                    document.getElementById("libreville-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Libreville" });
+                        document.getElementById("libreville-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Lilongwe') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Harare" });
-                    document.getElementById("lilongwe-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Harare" });
+                        document.getElementById("lilongwe-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Mbabane') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Mbabane" });
-                    document.getElementById("mbabane-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Africa/Mbabane" });
+                        document.getElementById("mbabane-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Lome') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Lome" });
-                    document.getElementById("lome-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Lome" });
+                        document.getElementById("lome-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Luanda') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Luanda" });
-                    document.getElementById("luanda-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Luanda" });
+                        document.getElementById("luanda-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Lusaka') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Lusaka" });
-                    document.getElementById("lusaka-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Lusaka" });
+                        document.getElementById("lusaka-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Malabo') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Malabo" });
-                    document.getElementById("malabo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Malabo" });
+                        document.getElementById("malabo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Maputo') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Maputo" });
-                    document.getElementById("maputo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Maputo" });
+                        document.getElementById("maputo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Maseru') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Maseru" });
-                    document.getElementById("maseru-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Maseru" });
+                        document.getElementById("maseru-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Mogadishu') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Mogadishu" });
-                    document.getElementById("mogadishu-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Mogadishu" });
+                        document.getElementById("mogadishu-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Monrovia') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Monrovia" });
-                    document.getElementById("monrovia-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Monrovia" });
+                        document.getElementById("monrovia-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Moroni') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Mogadishu" });
-                    document.getElementById("moroni-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Mogadishu" });
+                        document.getElementById("moroni-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Nairobi') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Nairobi" });
-                    document.getElementById("nairobi-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Nairobi" });
+                        document.getElementById("nairobi-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'NDjamena') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/NDjamena" });
-                    document.getElementById("ndjamena-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/NDjamena" });
+                        document.getElementById("ndjamena-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Niamey') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Niamey" });
-                    document.getElementById("niamey-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Niamey" });
+                        document.getElementById("niamey-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Nouakchott') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Nouakchott" });
-                    document.getElementById("nouakchott-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Nouakchott" });
+                        document.getElementById("nouakchott-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Ouagadougou') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Ouagadougou" });
-                    document.getElementById("ouagadougou-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Ouagadougou" });
+                        document.getElementById("ouagadougou-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Port Louis') {
-                    time = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Baku" });
-                    document.getElementById("port louis-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Baku" });
+                        document.getElementById("port louis-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Porto Novo') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Niamey" });
-                    document.getElementById("porto novo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Niamey" });
+                        document.getElementById("porto novo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Praia') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Atlantic/Cape_Verde" });
-                    document.getElementById("praia-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Atlantic/Cape_Verde" });
+                        document.getElementById("praia-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Rabat') {
-                    time = new Date().toLocaleString("ja-JP", { timeZone: "Africa/Ouagadougou" });
-                    document.getElementById("rabat-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("ja-JP", { timeZone: "Africa/Ouagadougou" });
+                        document.getElementById("rabat-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tripoli') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Tripoli" });
-                    document.getElementById("tripoli-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Tripoli" });
+                        document.getElementById("tripoli-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tunis') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Tunis" });
-                    document.getElementById("tunis-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Tunis" });
+                        document.getElementById("tunis-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Victoria') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Baku" });
-                    document.getElementById("victoria-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Baku" });
+                        document.getElementById("victoria-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Windhoek') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Windhoek" });
-                    document.getElementById("windhoek-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Windhoek" });
+                        document.getElementById("windhoek-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Yamoussoukro') {
-                    time = new Date().toLocaleString("ja-JP", { timeZone: "Africa/Ouagadougou" });
-                    document.getElementById("yamoussoukro-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("ja-JP", { timeZone: "Africa/Ouagadougou" });
+                        document.getElementById("yamoussoukro-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Yaounde') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Tunis" });
-                    document.getElementById("yaounde-time").innerHTML = time;
-                } 
-            }
-
-            setInterval(displayTime, 1000);</script>
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Africa/Tunis" });
+                        document.getElementById("yaounde-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
+                }
+            }</script>
     </head>
     <body onload="displayTime()">
-        <button onclick="displayTimeInCity('Abuja')">Abuja</button>
-        <button onclick="displayTimeInCity('Accra')">Accra</button>
-        <button onclick="displayTimeInCity('Addis Ababa')">Addis Ababa</button>
-        <button onclick="displayTimeInCity('Algiers')">Algiers</button>
-        <button onclick="displayTimeInCity('Antananarivo')">Antananarivo</button>
-        <button onclick="displayTimeInCity('Asmara')">Asmara</button>
-        <button onclick="displayTimeInCity('Bamako')">Bamako</button>
-        <button onclick="displayTimeInCity('Bangui')">Bangui</button>
-        <button onclick="displayTimeInCity('Banjul')">Banjul</button>
-        <button onclick="displayTimeInCity('Bissau')">Bissau</button>
-        <button onclick="displayTimeInCity('Brazzaville')">Brazzaville</button>
-        <button onclick="displayTimeInCity('Bujumbura')">Bujumbura</button>
-        <button onclick="displayTimeInCity('Cairo')">Cairo</button>
-        <button onclick="displayTimeInCity('Cape Town')">Cape Town</button>
-        <button onclick="displayTimeInCity('Conakry')">Conakry</button>
-        <button onclick="displayTimeInCity('Dakar')">Dakar</button>
-        <button onclick="displayTimeInCity('Dodoma')">Dodoma</button>
-        <button onclick="displayTimeInCity('Djibouti City')">Djibouti City</button>
-        <button onclick="displayTimeInCity('Freetown')">Freetown</button>
-        <button onclick="displayTimeInCity('Gaborone')">Gaborone</button>
-        <button onclick="displayTimeInCity('Harare')">Harare</button>
-        <button onclick="displayTimeInCity('Juba')">Juba</button>
-        <button onclick="displayTimeInCity('Kampala')">Kampala</button>
-        <button onclick="displayTimeInCity('Khartoum')">Khartoum</button>
-        <button onclick="displayTimeInCity('Kigali')">Kigali</button>
-        <button onclick="displayTimeInCity('Kinshasa')">Kinshasa</button>
-        <button onclick="displayTimeInCity('Libreville')">Libreville</button>
-        <button onclick="displayTimeInCity('Lilongwe')">Lilongwe</button>
-        <button onclick="displayTimeInCity('Mbabane')">Mbabane</button>
-        <button onclick="displayTimeInCity('Lome')">Lome</button>
-        <button onclick="displayTimeInCity('Luanda')">Luanda</button>
-        <button onclick="displayTimeInCity('Lusaka')">Lusaka</button>
-        <button onclick="displayTimeInCity('Malabo')">Malabo</button>
-        <button onclick="displayTimeInCity('Maputo')">Maputo</button>
-        <button onclick="displayTimeInCity('Maseru')">Maseru</button>
-        <button onclick="displayTimeInCity('Mogadishu')">Mogadishu</button>
-        <button onclick="displayTimeInCity('Monrovia')">Monrovia</button>
-        <button onclick="displayTimeInCity('Moroni')">Moroni</button>
-        <button onclick="displayTimeInCity('Nairobi')">Nairobi</button>
-        <button onclick="displayTimeInCity('NDjamena')">Ndjamena</button>
-        <button onclick="displayTimeInCity('Niamey')">Niamey</button>
-        <button onclick="displayTimeInCity('Nouakchott')">Nouakchott</button>
-        <button onclick="displayTimeInCity('Ouagadougou')">Ouagadougou</button>
-        <button onclick="displayTimeInCity('Port Louis')">Port Louis</button>
-        <button onclick="displayTimeInCity('Porto Novo')">Porto Novo</button>
-        <button onclick="displayTimeInCity('Praia')">Praia</button>
-        <button onclick="displayTimeInCity('Rabat')">Rabat</button>
-        <button onclick="displayTimeInCity('Tripoli')">Tripoli</button>
-        <button onclick="displayTimeInCity('Tunis')">Tunis</button>
-        <button onclick="displayTimeInCity('Victoria')">Victoria</button>
-        <button onclick="displayTimeInCity('Windhoek')">Windhoek</button>
-        <button onclick="displayTimeInCity('Yamoussoukro')">Yamoussoukro</button>
-        <button onclick="displayTimeInCity('Yaounde')">Yaounde</button>
+        <h1 style="color: darkred">Africa</h1>
+        <button onclick="displayTimeInCity('Abuja')" style="color: darkred">Abuja</button>
+        <button onclick="displayTimeInCity('Accra')" style="color: darkred">Accra</button>
+        <button onclick="displayTimeInCity('Addis Ababa')" style="color: darkred">Addis Ababa</button>
+        <button onclick="displayTimeInCity('Algiers')" style="color: darkred">Algiers</button>
+        <button onclick="displayTimeInCity('Antananarivo')" style="color: darkred">Antananarivo</button>
+        <button onclick="displayTimeInCity('Asmara')" style="color: darkred">Asmara</button>
+        <button onclick="displayTimeInCity('Bamako')" style="color: darkred">Bamako</button>
+        <button onclick="displayTimeInCity('Bangui')" style="color: darkred">Bangui</button>
+        <button onclick="displayTimeInCity('Banjul')" style="color: darkred">Banjul</button>
+        <button onclick="displayTimeInCity('Bissau')" style="color: darkred">Bissau</button>
+        <button onclick="displayTimeInCity('Brazzaville')" style="color: darkred">Brazzaville</button>
+        <button onclick="displayTimeInCity('Bujumbura')" style="color: darkred">Bujumbura</button>
+        <button onclick="displayTimeInCity('Cairo')" style="color: darkred">Cairo</button>
+        <button onclick="displayTimeInCity('Cape Town')" style="color: darkred">Cape Town</button>
+        <button onclick="displayTimeInCity('Conakry')" style="color: darkred">Conakry</button>
+        <button onclick="displayTimeInCity('Dakar')" style="color: darkred">Dakar</button>
+        <button onclick="displayTimeInCity('Dodoma')" style="color: darkred">Dodoma</button>
+        <button onclick="displayTimeInCity('Djibouti City')" style="color: darkred">Djibouti City</button>
+        <button onclick="displayTimeInCity('Freetown')" style="color: darkred">Freetown</button>
+        <button onclick="displayTimeInCity('Gaborone')" style="color: darkred">Gaborone</button>
+        <button onclick="displayTimeInCity('Harare')" style="color: darkred">Harare</button>
+        <button onclick="displayTimeInCity('Juba')" style="color: darkred">Juba</button>
+        <button onclick="displayTimeInCity('Kampala')" style="color: darkred">Kampala</button>
+        <button onclick="displayTimeInCity('Khartoum')" style="color: darkred">Khartoum</button>
+        <button onclick="displayTimeInCity('Kigali')" style="color: darkred">Kigali</button>
+        <button onclick="displayTimeInCity('Kinshasa')" style="color: darkred">Kinshasa</button>
+        <button onclick="displayTimeInCity('Libreville')" style="color: darkred">Libreville</button>
+        <button onclick="displayTimeInCity('Lilongwe')" style="color: darkred">Lilongwe</button>
+        <button onclick="displayTimeInCity('Mbabane')" style="color: darkred">Mbabane</button>
+        <button onclick="displayTimeInCity('Lome')" style="color: darkred">Lome</button>
+        <button onclick="displayTimeInCity('Luanda')" style="color: darkred">Luanda</button>
+        <button onclick="displayTimeInCity('Lusaka')" style="color: darkred">Lusaka</button>
+        <button onclick="displayTimeInCity('Malabo')" style="color: darkred">Malabo</button>
+        <button onclick="displayTimeInCity('Maputo')" style="color: darkred">Maputo</button>
+        <button onclick="displayTimeInCity('Maseru')" style="color: darkred">Maseru</button>
+        <button onclick="displayTimeInCity('Mogadishu')" style="color: darkred">Mogadishu</button>
+        <button onclick="displayTimeInCity('Monrovia')" style="color: darkred">Monrovia</button>
+        <button onclick="displayTimeInCity('Moroni')" style="color: darkred">Moroni</button>
+        <button onclick="displayTimeInCity('Nairobi')" style="color: darkred">Nairobi</button>
+        <button onclick="displayTimeInCity('NDjamena')" style="color: darkred">Ndjamena</button>
+        <button onclick="displayTimeInCity('Niamey')" style="color: darkred">Niamey</button>
+        <button onclick="displayTimeInCity('Nouakchott')" style="color: darkred">Nouakchott</button>
+        <button onclick="displayTimeInCity('Ouagadougou')" style="color: darkred">Ouagadougou</button>
+        <button onclick="displayTimeInCity('Port Louis')" style="color: darkred">Port Louis</button>
+        <button onclick="displayTimeInCity('Porto Novo')" style="color: darkred">Porto Novo</button>
+        <button onclick="displayTimeInCity('Praia')" style="color: darkred">Praia</button>
+        <button onclick="displayTimeInCity('Rabat')" style="color: darkred">Rabat</button>
+        <button onclick="displayTimeInCity('Tripoli')" style="color: darkred">Tripoli</button>
+        <button onclick="displayTimeInCity('Tunis')" style="color: darkred">Tunis</button>
+        <button onclick="displayTimeInCity('Victoria')" style="color: darkred">Victoria</button>
+        <button onclick="displayTimeInCity('Windhoek')" style="color: darkred">Windhoek</button>
+        <button onclick="displayTimeInCity('Yamoussoukro')" style="color: darkred">Yamoussoukro</button>
+        <button onclick="displayTimeInCity('Yaounde')" style="color: darkred">Yaounde</button>
         <div class="row">
             <div class="column">
                 <div class="leftside">
-                    <p>The current time in Abuja is: <span id="abuja-time"></span></p>
-                    <p>The current time in Accra is: <span id="accra-time"></span></p>
-                    <p>The current time in Addis Ababa is: <span id="addis ababa-time"></span></p>
-                    <p>The current time in Algiers is: <span id="algiers-time"></span></p>
-                    <p>The current time in Antananarivo is: <span id="antananarivo-time"></span></p>
-                    <p>The current time in Asmara is: <span id="asmara-time"></span></p>
-                    <p>The current time in Bamako is: <span id="bamako-time"></span></p>
-                    <p>The current time in Bangui is: <span id="bangui-time"></span></p>
-                    <p>The current time in Banjul is: <span id="banjul-time"></span></p>
-                    <p>The current time in Bissau is: <span id="bissau-time"></span></p>
-                    <p>The current time in Brazzaville is: <span id="brazzaville-time"></span></p>
-                    <p>The current time in Bujumbura is: <span id="bujumbura-time"></span></p>
-                    <p>The current time in Cairo is: <span id="cairo-time"></span></p>
-                    <p>The current time in Cape Town is: <span id="cape town-time"></span></p>
-                    <p>The current time in Conakry is: <span id="conakry-time"></span></p>
-                    <p>The current time in Dakar is: <span id="dakar-time"></span></p>
-                    <p>The current time in Dodoma is: <span id="dodoma-time"></span></p>
-                    <p>The current time in Djibouti City is: <span id="djibouti city-time"></span></p>
-                    <p>The current time in Freetown is: <span id="freetown-time"></span></p>
-                    <p>The current time in Gaborone is: <span id="gaborone-time"></span></p>
-                    <p>The current time in Harare is: <span id="harare-time"></span></p>
-                    <p>The current time in Juba is: <span id="juba-time"></span></p>
-                    <p>The current time in Kampala is: <span id="kampala-time"></span></p>
-                    <p>The current time in Khartoum is: <span id="khartoum-time"></span></p>
-                    <p>The current time in Kigali is: <span id="kigali-time"></span></p>
-                    <p>The current time in Kinshasa is: <span id="kinshasa-time"></span></p>
-                    <p>The current time in Libreville is: <span id="libreville-time"></span></p>
+                    <p style="color: darkred">The current time in Abuja is: <span id="abuja-time"></span></p>
+                    <p style="color: darkred">The current time in Accra is: <span id="accra-time"></span></p>
+                    <p style="color: darkred">The current time in Addis Ababa is: <span id="addis ababa-time"></span></p>
+                    <p style="color: darkred">The current time in Algiers is: <span id="algiers-time"></span></p>
+                    <p style="color: darkred">The current time in Antananarivo is: <span id="antananarivo-time"></span></p>
+                    <p style="color: darkred">The current time in Asmara is: <span id="asmara-time"></span></p>
+                    <p style="color: darkred">The current time in Bamako is: <span id="bamako-time"></span></p>
+                    <p style="color: darkred">The current time in Bangui is: <span id="bangui-time"></span></p>
+                    <p style="color: darkred">The current time in Banjul is: <span id="banjul-time"></span></p>
+                    <p style="color: darkred">The current time in Bissau is: <span id="bissau-time"></span></p>
+                    <p style="color: darkred">The current time in Brazzaville is: <span id="brazzaville-time"></span></p>
+                    <p style="color: darkred">The current time in Bujumbura is: <span id="bujumbura-time"></span></p>
+                    <p style="color: darkred">The current time in Cairo is: <span id="cairo-time"></span></p>
+                    <p style="color: darkred">The current time in Cape Town is: <span id="cape town-time"></span></p>
+                    <p style="color: darkred">The current time in Conakry is: <span id="conakry-time"></span></p>
+                    <p style="color: darkred">The current time in Dakar is: <span id="dakar-time"></span></p>
+                    <p style="color: darkred">The current time in Dodoma is: <span id="dodoma-time"></span></p>
+                    <p style="color: darkred">The current time in Djibouti City is: <span id="djibouti city-time"></span></p>
+                    <p style="color: darkred">The current time in Freetown is: <span id="freetown-time"></span></p>
+                    <p style="color: darkred">The current time in Gaborone is: <span id="gaborone-time"></span></p>
+                    <p style="color: darkred">The current time in Harare is: <span id="harare-time"></span></p>
+                    <p style="color: darkred">The current time in Juba is: <span id="juba-time"></span></p>
+                    <p style="color: darkred">The current time in Kampala is: <span id="kampala-time"></span></p>
+                    <p style="color: darkred">The current time in Khartoum is: <span id="khartoum-time"></span></p>
+                    <p style="color: darkred">The current time in Kigali is: <span id="kigali-time"></span></p>
+                    <p style="color: darkred">The current time in Kinshasa is: <span id="kinshasa-time"></span></p>
+                    <p style="color: darkred">The current time in Libreville is: <span id="libreville-time"></span></p>
                 </div>
             </div>
             <div class="column">
                 <div class="rightside">
-                    <p>The current time in Lilongwe is: <span id="lilongwe-time"></span></p>
-                    <p>The current time in Mbabane is: <span id="mbabane-time"></span></p>
-                    <p>The current time in Lome is: <span id="lome-time"></span></p>
-                    <p>The current time in Luanda is: <span id="luanda-time"></span></p>
-                    <p>The current time in Lusaka is: <span id="lusaka-time"></span></p>
-                    <p>The current time in Malabo is: <span id="malabo-time"></span></p>
-                    <p>The current time in Maputo is: <span id="maputo-time"></span></p>
-                    <p>The current time in Maseru is: <span id="maseru-time"></span></p>
-                    <p>The current time in Mogadishu is: <span id="mogadishu-time"></span></p>
-                    <p>The current time in Monrovia is: <span id="monrovia-time"></span></p>
-                    <p>The current time in Moroni is: <span id="moroni-time"></span></p>
-                    <p>The current time in Nairobi is: <span id="nairobi-time"></span></p>
-                    <p>The current time in Ndjamena is: <span id="ndjamena-time"></span></p>
-                    <p>The current time in Niamey is: <span id="niamey-time"></span></p>
-                    <p>The current time in Nouakchott is: <span id="nouakchott-time"></span></p>
-                    <p>The current time in Ouagadougou is: <span id="ouagadougou-time"></span></p>
-                    <p>The current time in Port Louis is: <span id="port louis-time"></span></p>
-                    <p>The current time in Porto Novo is: <span id="porto novo-time"></span></p>
-                    <p>The current time in Praia is: <span id="praia-time"></span></p>
-                    <p>The current time in Rabat is: <span id="rabat-time"></span></p>
-                    <p>The current time in Tripoli is: <span id="tripoli-time"></span></p>
-                    <p>The current time in Tunis is: <span id="tunis-time"></span></p>
-                    <p>The current time in Victoria is: <span id="victoria-time"></span></p>
-                    <p>The current time in Windhoek is: <span id="windhoek-time"></span></p>
-                    <p>The current time in Yamoussoukro is: <span id="yamoussoukro-time"></span></p>
-                    <p>The current time in Yaounde is: <span id="yaounde-time"></span></p>
+                    <p style="color: darkred">The current time in Lilongwe is: <span id="lilongwe-time"></span></p>
+                    <p style="color: darkred">The current time in Mbabane is: <span id="mbabane-time"></span></p>
+                    <p style="color: darkred">The current time in Lome is: <span id="lome-time"></span></p>
+                    <p style="color: darkred">The current time in Luanda is: <span id="luanda-time"></span></p>
+                    <p style="color: darkred">The current time in Lusaka is: <span id="lusaka-time"></span></p>
+                    <p style="color: darkred">The current time in Malabo is: <span id="malabo-time"></span></p>
+                    <p style="color: darkred">The current time in Maputo is: <span id="maputo-time"></span></p>
+                    <p style="color: darkred">The current time in Maseru is: <span id="maseru-time"></span></p>
+                    <p style="color: darkred">The current time in Mogadishu is: <span id="mogadishu-time"></span></p>
+                    <p style="color: darkred">The current time in Monrovia is: <span id="monrovia-time"></span></p>
+                    <p style="color: darkred">The current time in Moroni is: <span id="moroni-time"></span></p>
+                    <p style="color: darkred">The current time in Nairobi is: <span id="nairobi-time"></span></p>
+                    <p style="color: darkred">The current time in Ndjamena is: <span id="ndjamena-time"></span></p>
+                    <p style="color: darkred">The current time in Niamey is: <span id="niamey-time"></span></p>
+                    <p style="color: darkred">The current time in Nouakchott is: <span id="nouakchott-time"></span></p>
+                    <p style="color: darkred">The current time in Ouagadougou is: <span id="ouagadougou-time"></span></p>
+                    <p style="color: darkred">The current time in Port Louis is: <span id="port louis-time"></span></p>
+                    <p style="color: darkred">The current time in Porto Novo is: <span id="porto novo-time"></span></p>
+                    <p style="color: darkred">The current time in Praia is: <span id="praia-time"></span></p>
+                    <p style="color: darkred">The current time in Rabat is: <span id="rabat-time"></span></p>
+                    <p style="color: darkred">The current time in Tripoli is: <span id="tripoli-time"></span></p>
+                    <p style="color: darkred">The current time in Tunis is: <span id="tunis-time"></span></p>
+                    <p style="color: darkred">The current time in Victoria is: <span id="victoria-time"></span></p>
+                    <p style="color: darkred">The current time in Windhoek is: <span id="windhoek-time"></span></p>
+                    <p style="color: darkred">The current time in Yamoussoukro is: <span id="yamoussoukro-time"></span></p>
+                    <p style="color: darkred">The current time in Yaounde is: <span id="yaounde-time"></span></p>
                 </div>
             </div>
         </div>

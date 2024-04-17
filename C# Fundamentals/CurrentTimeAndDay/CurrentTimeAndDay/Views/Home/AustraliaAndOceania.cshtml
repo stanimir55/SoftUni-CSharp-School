@@ -3,7 +3,7 @@
     <head>
         <style>
             body {
-                background-color: azure;
+                background-image: url(https://bg.izzi.digital/DOS/69213/datastore/15/publication/69213/pictures/2021/02/09/1612864336_KoricaM3U1.jpg?v=1700033690);
                 text-align: center;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
@@ -52,99 +52,133 @@
             }
         </style>
         <title>Current Time and Day</title>
-        <script>function displayTime() {
-                var date = new Date();
-                var time = date.toLocaleTimeString();
-                var day = date.toLocaleDateString();
-                document.getElementById("time").innerHTML = time;
-                document.getElementById("day").innerHTML = day;
-            }
-
-            function displayTimeInCity(city) {
+        <script>function displayTimeInCity(city) {
                 var time;
+                var func;
                 if (city === 'Canberra') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Port_Moresby" });
-                    document.getElementById("canberra-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Port_Moresby" });
+                        document.getElementById("canberra-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Suva') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
-                    document.getElementById("suva-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
+                        document.getElementById("suva-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tarawa') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
-                    document.getElementById("tarawa-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
+                        document.getElementById("tarawa-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Majuro') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
-                    document.getElementById("majuro-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
+                        document.getElementById("majuro-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Palikir') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Guadalcanal" });
-                    document.getElementById("palikir-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Guadalcanal" });
+                        document.getElementById("palikir-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Yaren') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
-                    document.getElementById("yaren-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
+                        document.getElementById("yaren-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Wellington') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Port_Moresby" });
-                    document.getElementById("wellington-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Port_Moresby" });
+                        document.getElementById("wellington-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Koror') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Palau" });
-                    document.getElementById("koror-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Palau" });
+                        document.getElementById("koror-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Port Moresby') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Port_Moresby" });
-                    document.getElementById("port moresby-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Port_Moresby" });
+                        document.getElementById("port moresby-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Apia') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Apia" });
-                    document.getElementById("apia-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Apia" });
+                        document.getElementById("apia-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Honiara') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Guadalcanal" });
-                    document.getElementById("honiara-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Guadalcanal" });
+                        document.getElementById("honiara-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Nukualofa') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Tongatapu" });
-                    document.getElementById("nukualofa-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Tongatapu" });
+                        document.getElementById("nukualofa-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Funafuti') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
-                    document.getElementById("funafuti-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Fiji" });
+                        document.getElementById("funafuti-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Port Vila') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Guadalcanal" });
-                    document.getElementById("port vila-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Pacific/Guadalcanal" });
+                        document.getElementById("port vila-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 }
-            }
-
-            setInterval(displayTime, 1000);</script>
+            }</script>
     </head>
     <body onload="displayTime()">
-        <button onclick="displayTimeInCity('Canberra')">Canberra</button>
-        <button onclick="displayTimeInCity('Suva')">Suva</button>
-        <button onclick="displayTimeInCity('Tarawa')">Tarawa</button>
-        <button onclick="displayTimeInCity('Majuro')">Majuro</button>
-        <button onclick="displayTimeInCity('Palikir')">Palikir</button>
-        <button onclick="displayTimeInCity('Yaren')">Yaren</button>
-        <button onclick="displayTimeInCity('Wellington')">Wellington</button>
-        <button onclick="displayTimeInCity('Koror')">Koror</button>
-        <button onclick="displayTimeInCity('Port Moresby')">Port Moresby</button>
-        <button onclick="displayTimeInCity('Apia')">Apia</button>
-        <button onclick="displayTimeInCity('Honiara')">Honiara</button>
-        <button onclick="displayTimeInCity('Nukualofa')">Nukualofa</button>
-        <button onclick="displayTimeInCity('Funafuti')">Funafuti</button>
-        <button onclick="displayTimeInCity('Port Vila')">Port Vila</button>
+        <h1 style="color: green">Australia and Oceania</h1>
+        <button onclick="displayTimeInCity('Apia')" style="color: green">Apia</button>
+        <button onclick="displayTimeInCity('Canberra')" style="color: green">Canberra</button>
+        <button onclick="displayTimeInCity('Funafuti')" style="color: green">Funafuti</button>
+        <button onclick="displayTimeInCity('Honiara')" style="color: green">Honiara</button>
+        <button onclick="displayTimeInCity('Koror')" style="color: green">Koror</button>
+        <button onclick="displayTimeInCity('Majuro')" style="color: green">Majuro</button>
+        <button onclick="displayTimeInCity('Nukualofa')" style="color: green">Nukualofa</button>
+        <button onclick="displayTimeInCity('Palikir')" style="color: green">Palikir</button>
+        <button onclick="displayTimeInCity('Port Moresby')" style="color: green">Port Moresby</button>
+        <button onclick="displayTimeInCity('Port Vila')" style="color: green">Port Vila</button>
+        <button onclick="displayTimeInCity('Suva')" style="color: green">Suva</button>
+        <button onclick="displayTimeInCity('Tarawa')" style="color: green">Tarawa</button>
+        <button onclick="displayTimeInCity('Wellington')" style="color: green">Wellington</button>
+        <button onclick="displayTimeInCity('Yaren')" style="color: green">Yaren</button>
         <div class="row">
             <div class="column">
                 <div class="leftside">
-                    <p>The current time in Canberra is: <span id="canberra-time"></span></p>
-                    <p>The current time in Suva is: <span id="suva-time"></span></p>
-                    <p>The current time in Tarawa is: <span id="tarawa-time"></span></p>
-                    <p>The current time in Majuro is: <span id="majuro-time"></span></p>
-                    <p>The current time in Palikir is: <span id="palikir-time"></span></p>
-                    <p>The current time in Yaren is: <span id="yaren-time"></span></p>
-                    <p>The current time in Wellington is: <span id="wellington-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Apia is: <span id="apia-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Canberra is: <span id="canberra-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Funafuti is: <span id="funafuti-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Honiara is: <span id="honiara-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Koror is: <span id="koror-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Majuro is: <span id="majuro-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Nukualofa is: <span id="nukualofa-time"></span></p>
                 </div>
             </div>
             <div class="column">
                 <div class="rightside">
-                    <p>The current time in Koror is: <span id="koror-time"></span></p>
-                    <p>The current time in Port Moresby is: <span id="port moresby-time"></span></p>
-                    <p>The current time in Apia is: <span id="apia-time"></span></p>
-                    <p>The current time in Honiara is: <span id="honiara-time"></span></p>
-                    <p>The current time in Nukualofa is: <span id="nukualofa-time"></span></p>
-                    <p>The current time in Funafuti is: <span id="funafuti-time"></span></p>
-                    <p>The current time in Port Vila is: <span id="port vila-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Palikir is: <span id="palikir-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Port Moresby is: <span id="port moresby-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Port Vila is: <span id="port vila-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Suva is: <span id="suva-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Tarawa is: <span id="tarawa-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Wellington is: <span id="wellington-time"></span></p>
+                    <p style="color: darkgoldenrod">The current time in Yaren is: <span id="yaren-time"></span></p>
                 </div>
             </div>
         </div>

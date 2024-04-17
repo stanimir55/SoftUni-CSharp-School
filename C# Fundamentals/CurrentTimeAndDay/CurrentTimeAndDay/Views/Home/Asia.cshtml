@@ -3,7 +3,10 @@
     <head>
         <style>
             body {
-                background-color: azure;
+                background-image: url(https://bg.izzi.digital/DOS/69213/datastore/15/publication/69213/pictures/2021/02/09/1612864336_KoricaM3U1.jpg?v=1700033690);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: auto;
                 text-align: center;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
@@ -52,264 +55,397 @@
             }
         </style>
         <title>Current Time and Day</title>
-        <script>function displayTime() {
-                var date = new Date();
-                var time = date.toLocaleTimeString();
-                var day = date.toLocaleDateString();
-                document.getElementById("time").innerHTML = time;
-                document.getElementById("day").innerHTML = day;
-            }
-
-            function displayTimeInCity(city) {
+        <script>function displayTimeInCity(city) {
                 var time;
+                var func;
                 if (city === 'Abu Dhabi') {
-                    time = new Date().toLocaleString("cz-NL", { timeZone: "Asia/Baku" });
-                    document.getElementById("abu dhabi-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-NL", { timeZone: "Asia/Baku" });
+                        document.getElementById("abu dhabi-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Amman') {
-                    time = new Date().toLocaleString("cz-NL", { timeZone: "Asia/Amman" });
-                    document.getElementById("amman-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-NL", { timeZone: "Asia/Amman" });
+                        document.getElementById("amman-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Ankara') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Amman" });
-                    document.getElementById("ankara-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Amman" });
+                        document.getElementById("ankara-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Ashgabat') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Ashgabat" });
-                    document.getElementById("ashgabat-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Ashgabat" });
+                        document.getElementById("ashgabat-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Astana') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Ashgabat" });
-                    document.getElementById("astana-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Ashgabat" });
+                        document.getElementById("astana-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Baghdad') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Baghdad" });
-                    document.getElementById("baghdad-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Baghdad" });
+                        document.getElementById("baghdad-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Baku') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Baku" });
-                    document.getElementById("baku-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Baku" });
+                        document.getElementById("baku-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bandar Seri Begawan') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Manila" });
-                    document.getElementById("bandar seri begawan-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Manila" });
+                        document.getElementById("bandar seri begawan-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bangkok') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Bangkok" });
-                    document.getElementById("bangkok-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Bangkok" });
+                        document.getElementById("bangkok-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Beijing') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Manila" });
-                    document.getElementById("beijing-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Manila" });
+                        document.getElementById("beijing-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Beirut') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Beirut" });
-                    document.getElementById("beirut-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Beirut" });
+                        document.getElementById("beirut-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bishkek') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Bishkek" });
-                    document.getElementById("bishkek-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Bishkek" });
+                        document.getElementById("bishkek-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Colombo') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Colombo" });
-                    document.getElementById("colombo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Colombo" });
+                        document.getElementById("colombo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Damascus') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Damascus" });
-                    document.getElementById("damascus-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Damascus" });
+                        document.getElementById("damascus-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Dhaka') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dhaka" });
-                    document.getElementById("dhaka-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dhaka" });
+                        document.getElementById("dhaka-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Dili') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dili" });
-                    document.getElementById("dili-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dili" });
+                        document.getElementById("dili-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Doha') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Beirut" });
-                    document.getElementById("doha-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Beirut" });
+                        document.getElementById("doha-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Dushanbe') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Dushanbe" });
-                    document.getElementById("dushanbe-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Dushanbe" });
+                        document.getElementById("dushanbe-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Hanoi') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Jakarta" });
-                    document.getElementById("hanoi-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Jakarta" });
+                        document.getElementById("hanoi-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Islamabad') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Dushanbe" });
-                    document.getElementById("islamabad-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Dushanbe" });
+                        document.getElementById("islamabad-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Jakarta') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Jakarta" });
-                    document.getElementById("jakarta-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Jakarta" });
+                        document.getElementById("jakarta-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Jerusalem') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Jerusalem" });
-                    document.getElementById("jerusalem-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Jerusalem" });
+                        document.getElementById("jerusalem-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Kabul') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Kabul" });
-                    document.getElementById("kabul-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Kabul" });
+                        document.getElementById("kabul-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Kathumandu') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dhaka" });
-                    document.getElementById("kathumandu-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dhaka" });
+                        document.getElementById("kathumandu-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Kuwait City') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Jerusalem" });
-                    document.getElementById("kuwait city-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Jerusalem" });
+                        document.getElementById("kuwait city-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Male') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dushanbe" });
-                    document.getElementById("male-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Dushanbe" });
+                        document.getElementById("male-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Manama') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Jerusalem" });
-                    document.getElementById("manama-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Jerusalem" });
+                        document.getElementById("manama-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Manila') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Manila" });
-                    document.getElementById("manila-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Manila" });
+                        document.getElementById("manila-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Moscow') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Jerusalem" });
-                    document.getElementById("moscow-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "Asia/Jerusalem" });
+                        document.getElementById("moscow-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Muskat') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Baku" });
-                    document.getElementById("muskat-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Baku" });
+                        document.getElementById("muskat-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Naypyidaw') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Rangoon" });
-                    document.getElementById("naypyidaw-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Rangoon" });
+                        document.getElementById("naypyidaw-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'New Delhi') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Colombo" });
-                    document.getElementById("new delhi-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Colombo" });
+                        document.getElementById("new delhi-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Phnom Penh') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Vientiane" });
-                    document.getElementById("phnom penh-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Vientiane" });
+                        document.getElementById("phnom penh-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Pyongyang') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Pyongyang" });
-                    document.getElementById("pyongyang-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Pyongyang" });
+                        document.getElementById("pyongyang-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Riyadh') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Riyadh" });
-                    document.getElementById("riyadh-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Riyadh" });
+                        document.getElementById("riyadh-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Sanaa') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Riyadh" });
-                    document.getElementById("sanaa-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Riyadh" });
+                        document.getElementById("sanaa-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Seoul') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Pyongyang" });
-                    document.getElementById("seoul-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Pyongyang" });
+                        document.getElementById("seoul-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Singapore') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Singapore" });
-                    document.getElementById("singapore-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Singapore" });
+                        document.getElementById("singapore-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Taipei') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Taipei" });
-                    document.getElementById("taipei-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Taipei" });
+                        document.getElementById("taipei-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tashkent') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Tashkent" });
-                    document.getElementById("tashkent-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Tashkent" });
+                        document.getElementById("tashkent-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tbilisi') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Tbilisi" });
-                    document.getElementById("tbilisi-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Tbilisi" });
+                        document.getElementById("tbilisi-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tehran') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Tehran" });
-                    document.getElementById("tehran-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Tehran" });
+                        document.getElementById("tehran-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Thimphu') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Thimphu" });
-                    document.getElementById("thimphu-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Thimphu" });
+                        document.getElementById("thimphu-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Tokyo') {
-                    time = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
-                    document.getElementById("tokyo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
+                        document.getElementById("tokyo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Ulaanbaatar') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Ulaanbaatar" });
-                    document.getElementById("ulaanbaatar-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Ulaanbaatar" });
+                        document.getElementById("ulaanbaatar-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Vientiane') {
-                    time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Vientiane" });
-                    document.getElementById("vientiane-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("en-GB", { timeZone: "Asia/Vientiane" });
+                        document.getElementById("vientiane-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Yerevan') {
-                    time = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Yerevan" });
-                    document.getElementById("yerevan-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Yerevan" });
+                        document.getElementById("yerevan-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 }
-            }
-
-            setInterval(displayTime, 1000);</script>
+            }</script>
     </head>
     <body onload="displayTime()">
-        <button onclick="displayTimeInCity('Abu Dhabi')">Abu Dhabi</button>
-        <button onclick="displayTimeInCity('Amman')">Amman</button>
-        <button onclick="displayTimeInCity('Ankara')">Ankara</button>
-        <button onclick="displayTimeInCity('Ashgabat')">Ashgabat</button>
-        <button onclick="displayTimeInCity('Astana')">Astana</button>
-        <button onclick="displayTimeInCity('Baghdad')">Baghdad</button>
-        <button onclick="displayTimeInCity('Baku')">Baku</button>
-        <button onclick="displayTimeInCity('Bandar Seri Begawan')">Bandar Seri Begawan</button>
-        <button onclick="displayTimeInCity('Bangkok')">Bangkok</button>
-        <button onclick="displayTimeInCity('Beijing')">Beijing</button>
-        <button onclick="displayTimeInCity('Beirut')">Beirut</button>
-        <button onclick="displayTimeInCity('Bishkek')">Bishkek</button>
-        <button onclick="displayTimeInCity('Colombo')">Colombo</button>
-        <button onclick="displayTimeInCity('Damascus')">Damascus</button>
-        <button onclick="displayTimeInCity('Dhaka')">Dhaka</button>
-        <button onclick="displayTimeInCity('Dili')">Dili</button>
-        <button onclick="displayTimeInCity('Doha')">Doha</button>
-        <button onclick="displayTimeInCity('Dushanbe')">Dushanbe</button>
-        <button onclick="displayTimeInCity('Hanoi')">Hanoi</button>
-        <button onclick="displayTimeInCity('Islamabad')">Islamabad</button>
-        <button onclick="displayTimeInCity('Jakarta')">Jakarta</button>
-        <button onclick="displayTimeInCity('Jerusalem')">Jerusalem</button>
-        <button onclick="displayTimeInCity('Kabul')">Kabul</button>
-        <button onclick="displayTimeInCity('Kathumandu')">Kathumandu</button>
-        <button onclick="displayTimeInCity('Kuwait City')">Kuwait City</button>
-        <button onclick="displayTimeInCity('Male')">Male</button>
-        <button onclick="displayTimeInCity('Manama')">Manama</button>
-        <button onclick="displayTimeInCity('Manila')">Manila</button>
-        <button onclick="displayTimeInCity('Moscow')">Moscow</button>
-        <button onclick="displayTimeInCity('Muskat')">Muskat</button>
-        <button onclick="displayTimeInCity('Naypyidaw')">Naypyidaw</button>
-        <button onclick="displayTimeInCity('New Delhi')">New Delhi</button>
-        <button onclick="displayTimeInCity('Phnom Penh')">Phnom Penh</button>
-        <button onclick="displayTimeInCity('Pyongyang')">Pyongyang</button>
-        <button onclick="displayTimeInCity('Riyadh')">Riyadh</button>
-        <button onclick="displayTimeInCity('Sanaa')">Sanaa</button>
-        <button onclick="displayTimeInCity('Seoul')">Seoul</button>
-        <button onclick="displayTimeInCity('Singapore')">Singapore</button>
-        <button onclick="displayTimeInCity('Taipei')">Taipei</button>
-        <button onclick="displayTimeInCity('Tashkent')">Tashkent</button>
-        <button onclick="displayTimeInCity('Tbilisi')">Tbilisi</button>
-        <button onclick="displayTimeInCity('Tehran')">Tehran</button>
-        <button onclick="displayTimeInCity('Thimphu')">Thimphu</button>
-        <button onclick="displayTimeInCity('Tokyo')">Tokyo</button>
-        <button onclick="displayTimeInCity('Ulaanbaatar')">Ulaanbaatar</button>
-        <button onclick="displayTimeInCity('Vientiane')">Vientiane</button>
-        <button onclick="displayTimeInCity('Yerevan')">Yerevan</button>
+        <h1 style="color: red">Asia</h1>
+        <button onclick="displayTimeInCity('Abu Dhabi')" style="color: red">Abu Dhabi</button>
+        <button onclick="displayTimeInCity('Amman')" style="color: red">Amman</button>
+        <button onclick="displayTimeInCity('Ankara')" style="color: red">Ankara</button>
+        <button onclick="displayTimeInCity('Ashgabat')" style="color: red">Ashgabat</button>
+        <button onclick="displayTimeInCity('Astana')" style="color: red">Astana</button>
+        <button onclick="displayTimeInCity('Baghdad')" style="color: red">Baghdad</button>
+        <button onclick="displayTimeInCity('Baku')" style="color: red">Baku</button>
+        <button onclick="displayTimeInCity('Bandar Seri Begawan')" style="color: red">Bandar Seri Begawan</button>
+        <button onclick="displayTimeInCity('Bangkok')" style="color: red">Bangkok</button>
+        <button onclick="displayTimeInCity('Beijing')" style="color: red">Beijing</button>
+        <button onclick="displayTimeInCity('Beirut')" style="color: red">Beirut</button>
+        <button onclick="displayTimeInCity('Bishkek')" style="color: red">Bishkek</button>
+        <button onclick="displayTimeInCity('Colombo')" style="color: red">Colombo</button>
+        <button onclick="displayTimeInCity('Damascus')" style="color: red">Damascus</button>
+        <button onclick="displayTimeInCity('Dhaka')" style="color: red">Dhaka</button>
+        <button onclick="displayTimeInCity('Dili')" style="color: red">Dili</button>
+        <button onclick="displayTimeInCity('Doha')" style="color: red">Doha</button>
+        <button onclick="displayTimeInCity('Dushanbe')" style="color: red">Dushanbe</button>
+        <button onclick="displayTimeInCity('Hanoi')" style="color: red">Hanoi</button>
+        <button onclick="displayTimeInCity('Islamabad')" style="color: red">Islamabad</button>
+        <button onclick="displayTimeInCity('Jakarta')" style="color: red">Jakarta</button>
+        <button onclick="displayTimeInCity('Jerusalem')" style="color: red">Jerusalem</button>
+        <button onclick="displayTimeInCity('Kabul')" style="color: red">Kabul</button>
+        <button onclick="displayTimeInCity('Kathumandu')" style="color: red">Kathumandu</button>
+        <button onclick="displayTimeInCity('Kuwait City')" style="color: red">Kuwait City</button>
+        <button onclick="displayTimeInCity('Male')" style="color: red">Male</button>
+        <button onclick="displayTimeInCity('Manama')" style="color: red">Manama</button>
+        <button onclick="displayTimeInCity('Manila')" style="color: red">Manila</button>
+        <button onclick="displayTimeInCity('Moscow')" style="color: red">Moscow</button>
+        <button onclick="displayTimeInCity('Muskat')" style="color: red">Muskat</button>
+        <button onclick="displayTimeInCity('Naypyidaw')" style="color: red">Naypyidaw</button>
+        <button onclick="displayTimeInCity('New Delhi')" style="color: red">New Delhi</button>
+        <button onclick="displayTimeInCity('Phnom Penh')" style="color: red">Phnom Penh</button>
+        <button onclick="displayTimeInCity('Pyongyang')" style="color: red">Pyongyang</button>
+        <button onclick="displayTimeInCity('Riyadh')" style="color: red">Riyadh</button>
+        <button onclick="displayTimeInCity('Sanaa')" style="color: red">Sanaa</button>
+        <button onclick="displayTimeInCity('Seoul')" style="color: red">Seoul</button>
+        <button onclick="displayTimeInCity('Singapore')" style="color: red">Singapore</button>
+        <button onclick="displayTimeInCity('Taipei')" style="color: red">Taipei</button>
+        <button onclick="displayTimeInCity('Tashkent')" style="color: red">Tashkent</button>
+        <button onclick="displayTimeInCity('Tbilisi')" style="color: red">Tbilisi</button>
+        <button onclick="displayTimeInCity('Tehran')" style="color: red">Tehran</button>
+        <button onclick="displayTimeInCity('Thimphu')" style="color: red">Thimphu</button>
+        <button onclick="displayTimeInCity('Tokyo')" style="color: red">Tokyo</button>
+        <button onclick="displayTimeInCity('Ulaanbaatar')" style="color: red">Ulaanbaatar</button>
+        <button onclick="displayTimeInCity('Vientiane')" style="color: red">Vientiane</button>
+        <button onclick="displayTimeInCity('Yerevan')" style="color: red">Yerevan</button>
         <div class="row">
             <div class="column">
                 <div class="leftside">
-                    <p>The current time in Abu Dhabi is: <span id="abu dhabi-time"></span></p>
-                    <p>The current time in Amman is: <span id="amman-time"></span></p>
-                    <p>The current time in Ankara is: <span id="ankara-time"></span></p>
-                    <p>The current time in Ashgabat is: <span id="ashgabat-time"></span></p>
-                    <p>The current time in Astana is: <span id="astana-time"></span></p>
-                    <p>The current time in Baghdad is: <span id="baghdad-time"></span></p>
-                    <p>The current time in Baku is: <span id="baku-time"></span></p>
-                    <p>The current time in Bandar Seri Begawan is: <span id="bandar seri begawan-time"></span></p>
-                    <p>The current time in Bangkok is: <span id="bangkok-time"></span></p>
-                    <p>The current time in Beijing is: <span id="beijing-time"></span></p>
-                    <p>The current time in Beirut is: <span id="beirut-time"></span></p>
-                    <p>The current time in Bishkek is: <span id="bishkek-time"></span></p>
-                    <p>The current time in Colombo is: <span id="colombo-time"></span></p>
-                    <p>The current time in Damascus is: <span id="damascus-time"></span></p>
-                    <p>The current time in Dhaka is: <span id="dhaka-time"></span></p>
-                    <p>The current time in Dili is: <span id="dili-time"></span></p>
-                    <p>The current time in Doha is: <span id="doha-time"></span></p>
-                    <p>The current time in Dushanbe is: <span id="dushanbe-time"></span></p>
-                    <p>The current time in Hanoi is: <span id="hanoi-time"></span></p>
-                    <p>The current time in Islamabad is: <span id="islamabad-time"></span></p>
-                    <p>The current time in Jakarta is: <span id="jakarta-time"></span></p>
-                    <p>The current time in Jerusalem is: <span id="jerusalem-time"></span></p>
-                    <p>The current time in Kabul is: <span id="kabul-time"></span></p>
-                    <p>The current time in Kathumandu is: <span id="kathumandu-time"></span></p>
+                    <p style="color: red">The current time in Abu Dhabi is: <span id="abu dhabi-time"></span></p>
+                    <p style="color: red">The current time in Amman is: <span id="amman-time"></span></p>
+                    <p style="color: red">The current time in Ankara is: <span id="ankara-time"></span></p>
+                    <p style="color: red">The current time in Ashgabat is: <span id="ashgabat-time"></span></p>
+                    <p style="color: red">The current time in Astana is: <span id="astana-time"></span></p>
+                    <p style="color: red">The current time in Baghdad is: <span id="baghdad-time"></span></p>
+                    <p style="color: red">The current time in Baku is: <span id="baku-time"></span></p>
+                    <p style="color: red">The current time in Bandar Seri Begawan is: <span id="bandar seri begawan-time"></span></p>
+                    <p style="color: red">The current time in Bangkok is: <span id="bangkok-time"></span></p>
+                    <p style="color: red">The current time in Beijing is: <span id="beijing-time"></span></p>
+                    <p style="color: red">The current time in Beirut is: <span id="beirut-time"></span></p>
+                    <p style="color: red">The current time in Bishkek is: <span id="bishkek-time"></span></p>
+                    <p style="color: red">The current time in Colombo is: <span id="colombo-time"></span></p>
+                    <p style="color: red">The current time in Damascus is: <span id="damascus-time"></span></p>
+                    <p style="color: red">The current time in Dhaka is: <span id="dhaka-time"></span></p>
+                    <p style="color: red">The current time in Dili is: <span id="dili-time"></span></p>
+                    <p style="color: red">The current time in Doha is: <span id="doha-time"></span></p>
+                    <p style="color: red">The current time in Dushanbe is: <span id="dushanbe-time"></span></p>
+                    <p style="color: red">The current time in Hanoi is: <span id="hanoi-time"></span></p>
+                    <p style="color: red">The current time in Islamabad is: <span id="islamabad-time"></span></p>
+                    <p style="color: red">The current time in Jakarta is: <span id="jakarta-time"></span></p>
+                    <p style="color: red">The current time in Jerusalem is: <span id="jerusalem-time"></span></p>
+                    <p style="color: red">The current time in Kabul is: <span id="kabul-time"></span></p>
+                    <p style="color: red">The current time in Kathumandu is: <span id="kathumandu-time"></span></p>
                 </div>
             </div>
             <div class="column">
                 <div class="rightside">
-                    <p>The current time in Kuwait City is: <span id="kuwait city-time"></span></p>
-                    <p>The current time in Male is: <span id="male-time"></span></p>
-                    <p>The current time in Manama is: <span id="manama-time"></span></p>
-                    <p>The current time in Manila is: <span id="manila-time"></span></p>
-                    <p>The current time in Moscow is: <span id="moscow-time"></span></p>
-                    <p>The current time in Muskat is: <span id="muskat-time"></span></p>
-                    <p>The current time in Naypyidaw is: <span id="naypyidaw-time"></span></p>
-                    <p>The current time in New Delhi is: <span id="new delhi-time"></span></p>
-                    <p>The current time in Phnom Penh is: <span id="phnom penh-time"></span></p>
-                    <p>The current time in Pyongyang is: <span id="pyongyang-time"></span></p>
-                    <p>The current time in Riyadh is: <span id="riyadh-time"></span></p>
-                    <p>The current time in Sanaa is: <span id="sanaa-time"></span></p>
-                    <p>The current time in Seoul is: <span id="seoul-time"></span></p>
-                    <p>The current time in Singapore is: <span id="singapore-time"></span></p>
-                    <p>The current time in Taipei is: <span id="taipei-time"></span></p>
-                    <p>The current time in Tashkent is: <span id="tashkent-time"></span></p>
-                    <p>The current time in Tbilisi is: <span id="tbilisi-time"></span></p>
-                    <p>The current time in Tehran is: <span id="tehran-time"></span></p>
-                    <p>The current time in Thimphu is: <span id="thimphu-time"></span></p>
-                    <p>The current time in Tokyo is: <span id="tokyo-time"></span></p>
-                    <p>The current time in Ulaanbaatar is: <span id="ulaanbaatar-time"></span></p>
-                    <p>The current time in Vientiane is: <span id="vientiane-time"></span></p>
-                    <p>The current time in Yerevan is: <span id="yerevan-time"></span></p>
+                    <p style="color: red">The current time in Kuwait City is: <span id="kuwait city-time"></span></p>
+                    <p style="color: red">The current time in Male is: <span id="male-time"></span></p>
+                    <p style="color: red">The current time in Manama is: <span id="manama-time"></span></p>
+                    <p style="color: red">The current time in Manila is: <span id="manila-time"></span></p>
+                    <p style="color: red">The current time in Moscow is: <span id="moscow-time"></span></p>
+                    <p style="color: red">The current time in Muskat is: <span id="muskat-time"></span></p>
+                    <p style="color: red">The current time in Naypyidaw is: <span id="naypyidaw-time"></span></p>
+                    <p style="color: red">The current time in New Delhi is: <span id="new delhi-time"></span></p>
+                    <p style="color: red">The current time in Phnom Penh is: <span id="phnom penh-time"></span></p>
+                    <p style="color: red">The current time in Pyongyang is: <span id="pyongyang-time"></span></p>
+                    <p style="color: red">The current time in Riyadh is: <span id="riyadh-time"></span></p>
+                    <p style="color: red">The current time in Sanaa is: <span id="sanaa-time"></span></p>
+                    <p style="color: red">The current time in Seoul is: <span id="seoul-time"></span></p>
+                    <p style="color: red">The current time in Singapore is: <span id="singapore-time"></span></p>
+                    <p style="color: red">The current time in Taipei is: <span id="taipei-time"></span></p>
+                    <p style="color: red">The current time in Tashkent is: <span id="tashkent-time"></span></p>
+                    <p style="color: red">The current time in Tbilisi is: <span id="tbilisi-time"></span></p>
+                    <p style="color: red">The current time in Tehran is: <span id="tehran-time"></span></p>
+                    <p style="color: red">The current time in Thimphu is: <span id="thimphu-time"></span></p>
+                    <p style="color: red">The current time in Tokyo is: <span id="tokyo-time"></span></p>
+                    <p style="color: red">The current time in Ulaanbaatar is: <span id="ulaanbaatar-time"></span></p>
+                    <p style="color: red">The current time in Vientiane is: <span id="vientiane-time"></span></p>
+                    <p style="color: red">The current time in Yerevan is: <span id="yerevan-time"></span></p>
                 </div>
             </div>
         </div>

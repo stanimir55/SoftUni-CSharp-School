@@ -3,7 +3,10 @@
     <head>
         <style>
             body {
-                background-color: azure;
+                background-image: url(https://bg.izzi.digital/DOS/69213/datastore/15/publication/69213/pictures/2021/02/09/1612864336_KoricaM3U1.jpg?v=1700033690);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: auto;
                 text-align: center;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
@@ -52,95 +55,119 @@
             }
         </style>
         <title>Current Time and Day</title>
-        <script>function displayTime() {
-                var date = new Date();
-                var time = date.toLocaleTimeString();
-                var day = date.toLocaleDateString();
-                document.getElementById("time").innerHTML = time;
-                document.getElementById("day").innerHTML = day;
-            }
-
-            function displayTimeInCity(city) {
+        <script>function displayTimeInCity(city) {
                 var time;
                 if (city === 'Buenos Aires') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Buenos_Aires" });
-                    document.getElementById("buenos aires-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Buenos_Aires" });
+                        document.getElementById("buenos aires-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Surce') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/La_Paz" });
-                    document.getElementById("surce-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/La_Paz" });
+                        document.getElementById("surce-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Brasilia') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Sao_Paulo" });
-                    document.getElementById("brasilia-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Sao_Paulo" });
+                        document.getElementById("brasilia-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Santiago') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Santiago" });
-                    document.getElementById("santiago-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Santiago" });
+                        document.getElementById("santiago-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Bogota') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Bogota" });
-                    document.getElementById("bogota-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Bogota" });
+                        document.getElementById("bogota-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Quito') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Bogota" });
-                    document.getElementById("quito-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Bogota" });
+                        document.getElementById("quito-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Georgetown') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Santiago" });
-                    document.getElementById("georgetown-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Santiago" });
+                        document.getElementById("georgetown-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Asuncion') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Asuncion" });
-                    document.getElementById("asuncion-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Asuncion" });
+                        document.getElementById("asuncion-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Lima') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Lima" });
-                    document.getElementById("lima-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Lima" });
+                        document.getElementById("lima-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Paramaribo') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Paramaribo" });
-                    document.getElementById("paramaribo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Paramaribo" });
+                        document.getElementById("paramaribo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Montevideo') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Montevideo" });
-                    document.getElementById("montevideo-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Montevideo" });
+                        document.getElementById("montevideo-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 } else if (city === 'Caracas') {
-                    time = new Date().toLocaleString("cz-GR", { timeZone: "America/Caracas" });
-                    document.getElementById("caracas-time").innerHTML = time;
+                    func = function () {
+                        time = new Date().toLocaleString("cz-GR", { timeZone: "America/Caracas" });
+                        document.getElementById("caracas-time").innerHTML = time;
+                    }
+                    setInterval(func, 1000);
                 }
-            }
-
-            setInterval(displayTime, 1000);</script>
+            }</script>
     </head>
     <body onload="displayTime()">
-        <button onclick="displayTimeInCity('Buenos Aires')">Buenos Aires</button>
-        <button onclick="displayTimeInCity('Surce')">Surce</button>
-        <button onclick="displayTimeInCity('Brasilia')">Brasilia</button>
-        <button onclick="displayTimeInCity('Santiago')">Santiago</button>
-        <button onclick="displayTimeInCity('Bogota')">Bogota</button>
-        <button onclick="displayTimeInCity('Quito')">Quito</button>
-        <button onclick="displayTimeInCity('Georgetown')">Georgetown</button>
-        <button onclick="displayTimeInCity('Asuncion')">Asuncion</button>
-        <button onclick="displayTimeInCity('Lima')">Lima</button>
-        <button onclick="displayTimeInCity('Paramaribo')">Paramaribo</button>
-        <button onclick="displayTimeInCity('Montevideo')">Montevideo</button>
-        <button onclick="displayTimeInCity('Caracas')">Caracas</button>
+        <h1 style="color: chocolate">South America</h1>
+        <button onclick="displayTimeInCity('Asuncion')" style="color: chocolate">Asuncion</button>
+        <button onclick="displayTimeInCity('Bogota')" style="color: chocolate">Bogota</button>
+        <button onclick="displayTimeInCity('Brasilia')" style="color: chocolate">Brasilia</button>
+        <button onclick="displayTimeInCity('Buenos Aires')" style="color: chocolate">Buenos Aires</button>
+        <button onclick="displayTimeInCity('Caracas')" style="color: chocolate">Caracas</button>
+        <button onclick="displayTimeInCity('Georgetown')" style="color: chocolate">Georgetown</button>
+        <button onclick="displayTimeInCity('Lima')" style="color: chocolate">Lima</button>
+        <button onclick="displayTimeInCity('Montevideo')" style="color: chocolate">Montevideo</button>
+        <button onclick="displayTimeInCity('Paramaribo')" style="color: chocolate">Paramaribo</button>
+        <button onclick="displayTimeInCity('Quito')" style="color: chocolate">Quito</button>
+        <button onclick="displayTimeInCity('Santiago')" style="color: chocolate">Santiago</button>
+        <button onclick="displayTimeInCity('Surce')" style="color: chocolate">Surce</button>
         <div class="row">
             <div class="column">
                 <div class="leftside">
-                    <p>The current time in Buenos Aires is: <span id="buenos aires-time"></span></p>
-                    <p>The current time in Surce is: <span id="surce-time"></span></p>
-                    <p>The current time in Brasilia is: <span id="brasilia-time"></span></p>
-                    <p>The current time in Santiago is: <span id="santiago-time"></span></p>
-                    <p>The current time in Bogota is: <span id="bogota-time"></span></p>
-                    <p>The current time in Quito is: <span id="quito-time"></span></p>
+                    <p style="color: blueviolet">The current time in Asuncion is: <span id="asuncion-time"></span></p>
+                    <p style="color: blueviolet">The current time in Bogota is: <span id="bogota-time"></span></p>
+                    <p style="color: blueviolet">The current time in Brasilia is: <span id="brasilia-time"></span></p>
+                    <p style="color: blueviolet">The current time in Buenos Aires is: <span id="buenos aires-time"></span></p>
+                    <p style="color: blueviolet">The current time in Caracas is: <span id="caracas-time"></span></p>
+                    <p style="color: blueviolet">The current time in Georgetown is: <span id="georgetown-time"></span></p>
                 </div>
             </div>
             <div class="column">
                 <div class="rightside">
-                    <p>The current time in Georgetown is: <span id="georgetown-time"></span></p>
-                    <p>The current time in Asuncion is: <span id="asuncion-time"></span></p>
-                    <p>The current time in Lima is: <span id="lima-time"></span></p>
-                    <p>The current time in Paramaribo is: <span id="paramaribo-time"></span></p>
-                    <p>The current time in Montevideo is: <span id="montevideo-time"></span></p>
-                    <p>The current time in Caracas is: <span id="caracas-time"></span></p>
+                    <p style="color: blueviolet">The current time in Lima is: <span id="lima-time"></span></p>
+                    <p style="color: blueviolet">The current time in Montevideo is: <span id="montevideo-time"></span></p>
+                    <p style="color: blueviolet">The current time in Paramaribo is: <span id="paramaribo-time"></span></p>
+                    <p style="color: blueviolet">The current time in Quito is: <span id="quito-time"></span></p>
+                    <p style="color: blueviolet">The current time in Santiago is: <span id="santiago-time"></span></p>
+                    <p style="color: blueviolet">The current time in Surce is: <span id="surce-time"></span></p>
                 </div>
             </div>
         </div>
     </body>
 </html>
 }
-
-
-
