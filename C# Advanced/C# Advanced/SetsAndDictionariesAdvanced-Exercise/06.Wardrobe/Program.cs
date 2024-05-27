@@ -1,4 +1,4 @@
-﻿int lineCount = int.Parse(Console.ReadLine());
+int lineCount = int.Parse(Console.ReadLine());
 var wardrobe = new Dictionary<string, Dictionary<string, int>>();
 
 for (int i = 0; i < lineCount; i++)
@@ -31,13 +31,6 @@ foreach (var kvp in wardrobe)
 
     foreach (var kvpOne in kvp.Value)
     {
-        string outputValue = $"* {kvpOne.Key} - {kvpOne.Value}";
-
-        if (kvp.Key == lookUpValues[0] && kvpOne.Key == lookUpValues[1])
-        {
-            outputValue += $" (found!)";
-        }
-
-        Console.WriteLine(outputValue);
+        Console.WriteLine(kvp.Key == lookUpValues[0] && kvpOne.Key == lookUpValues[1] ? $"* {kvpOne.Key} - {kvpOne.Value} (found!)" : $"* {kvpOne.Key} - {kvpOne.Value}");
     }
 }
