@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RapidCourier", "FirstProblem\01.RapidCourier.csproj", "{8D586023-359B-4069-90EE-393ECF425361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Beesy", "SecondProblem\02.Beesy.csproj", "{43A5984E-DB8D-4234-9ABB-CADD2C445DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D586023-359B-4069-90EE-393ECF425361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D586023-359B-4069-90EE-393ECF425361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D586023-359B-4069-90EE-393ECF425361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D586023-359B-4069-90EE-393ECF425361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A5984E-DB8D-4234-9ABB-CADD2C445DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A5984E-DB8D-4234-9ABB-CADD2C445DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A5984E-DB8D-4234-9ABB-CADD2C445DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A5984E-DB8D-4234-9ABB-CADD2C445DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {217B2D0D-FC32-4392-873A-69187CCAF9A0}
+	EndGlobalSection
+EndGlobal
